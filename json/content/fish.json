@@ -21,24 +21,24 @@
 		"inst":"https://www.instagram.com/"
 	},
 	"page":{
-		"index":"/superpizzaplus/",
-		"products":"/superpizzaplus/products.html",
-		"products_category":"/superpizzaplus/products-category.html",
-		"products_card":"/superpizzaplus/products-card.html",
-		"products_calc":"/superpizzaplus/products-calc.html",
-		"action":"/superpizzaplus/action.html",
-		"action_item":"/superpizzaplus/action-item.html",
-		"delivery":"/superpizzaplus/delivery.html",
-		"about":"/superpizzaplus/about.html",
-		"reviews":"/superpizzaplus/reviews.html",
-		"contacts":"/superpizzaplus/contacts.html",
-		"404":"/superpizzaplus/404.html",
-		"basket":"/superpizzaplus/basket.html",
-		"basket_delivery":"/superpizzaplus/basket-delivery.html"
+		"index":"/",
+		"products":"/products.html",
+		"products_category":"/products-category.html",
+		"products_card":"/products-card.html",
+		"products_calc":"/products-calc.html",
+		"action":"/action.html",
+		"action_item":"/action-item.html",
+		"delivery":"/delivery.html",
+		"about":"/about.html",
+		"reviews":"/reviews.html",
+		"contacts":"/contacts.html",
+		"404":"/404.html",
+		"basket":"/basket.html",
+		"basket_delivery":"/basket-delivery.html"
 	},	                           
-	"url-path-css":"/superpizzaplus/css",
-	"url-path-img":"/superpizzaplus/img",
-	"url-path-js":"/superpizzaplus/js",
-	"url-path-plugins":"/superpizzaplus/plugins",
-	"url-path-favicon":"/superpizzaplus/favicon"
+	"url-path-css":"/css",
+	"url-path-img":"/img",
+	"url-path-js":"/js",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/favicon"
 }
