@@ -686,6 +686,13 @@
 				color: @red;
 				padding-right: 80px;
 			}
+			@media @media-point-screen {
+				cursor: default;
+				&:hover,
+				&[aria-expanded="true"]{
+					color: @cream;
+				}
+			}
 		}
 	}
 	&heading-icon{
@@ -718,7 +725,12 @@
 			height: auto;
 		}
 	}
-	&collapse{}
+	&collapse{
+		@media @media-point-screen {
+			display: block;
+			height: auto!important;
+		}
+	}
 	&norm{
 		padding-top: 5px;
 		color: @red;

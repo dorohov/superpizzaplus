@@ -2278,7 +2278,8 @@
 	}
 	&dorohovdesign-text{
 		font-size: @b-fs - 7px;
-		line-height: @b-lh - 12px;
+		line-height: @b-lh - 12px;    
+		letter-spacing: 1px;
 		//text-transform: uppercase;
 		font-weight: 700;
 		margin-left: auto;
@@ -2291,6 +2292,7 @@
 		@media @media-device{
 			padding-bottom: 2px;
 		    text-align: left;
+		    display: none;
 		}
 		@media @media-screen {
 			max-width: 60px;
@@ -6690,6 +6692,13 @@ body.rtl .formError .formErrorArrow {
 				color: @red;
 				padding-right: 80px;
 			}
+			@media @media-point-screen {
+				cursor: default;
+				&:hover,
+				&[aria-expanded="true"]{
+					color: @cream;
+				}
+			}
 		}
 	}
 	&heading-icon{
@@ -6722,7 +6731,12 @@ body.rtl .formError .formErrorArrow {
 			height: auto;
 		}
 	}
-	&collapse{}
+	&collapse{
+		@media @media-point-screen {
+			display: block;
+			height: auto!important;
+		}
+	}
 	&norm{
 		padding-top: 5px;
 		color: @red;

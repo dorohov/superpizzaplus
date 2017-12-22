@@ -1,11 +1,11 @@
 {
 	"contacts":{
-		"name":"ООО Орловский энергосбыт",
+		"name":"superpizzaplus",
 		"domain":"superpizzaplus.ru",
 		"domain_link":"http://superpizzaplus.ru/orel/",
 		"agreement_page":"agreement",
 		"copyright":"ИП Каленова Н.В.",
-		"email":"secretary@interrao-orel.ru",
+		"email":"mail@superpizzaplus.ru",
 		"phone":"437-437",  
 		"phone_tel":"+74862437437",   
 		"clock":"с&nbsp;9 до&nbsp;1:30",  
@@ -34,7 +34,8 @@
 		"contacts":"/contacts.html",
 		"404":"/404.html",
 		"basket":"/basket.html",
-		"basket_delivery":"/basket-delivery.html"
+		"basket_delivery":"/basket-delivery.html",
+		"agreement":"/agreement.html"
 	},	                           
 	"url-path-css":"/css",
 	"url-path-img":"/img",
