@@ -1,0 +1,20 @@
+<div class="{{block_prefix}}item">
+	<div class="{{page_prefix}}row  row  is--gutter  is--order  is--aic"> 
+		<div class="{{page_prefix}}cols cols  is--order-name">
+			<div class="{{block_prefix}}item-heading">
+				<a href="{{page.products_card}}">{{block_heading}}</a>, <small>{{block_weight}}г</small>
+			</div>
+		</div>
+		<div class="{{page_prefix}}cols cols  is--order-cost">
+			{{block_cost}}р
+		</div>
+		<div class="{{page_prefix}}cols cols  is--order-btn">
+			[[azbntple 
+				tpl="/src/block/site/default/button/button-icon-noname.html"
+				button_prefix="btn__" 
+				button_mod="is--check-delete"
+				button_icon="modal-close"
+			]]
+		</div>
+	</div>
+</div>

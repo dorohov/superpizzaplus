@@ -1,0 +1,235 @@
+@site-name : "site";
+@import "@{site-name}/var.less";
+/*Owl Carousel*/
+.owl-carousel{
+	&.is--round{
+		overflow: hidden;
+	}
+	/*Owl Carousel - Animate Plugin*/
+	.animated {
+		animation-duration: 1000ms;
+		animation-fill-mode: both;
+	}
+	.owl-animated-in {z-index: 0;}
+	.owl-animated-out {z-index: 1;}
+	.fadeOut {animation-name: fadeOut;}
+
+	/*Core Owl Carousel CSS File*/
+	display: none;
+	width: 100%;
+	-webkit-tap-highlight-color: transparent;
+	/* position relative and z-index fix webkit rendering fonts issue */
+	position: relative;
+	z-index: 1;
+	.owl-stage {
+		position: relative;
+		-ms-touch-action: pan-Y;
+		&:after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+	}
+	.owl-stage-outer {
+		position: relative;
+		overflow: hidden;
+		/* fix for flashing background */
+		transform: translate3d(0px, 0px, 0px);
+		/*@media @media-device {padding-bottom: 55px;}
+		@media @media-screen {padding-bottom: 75px;}
+		@media @media-size-xxl {padding-bottom: 0}*/
+	}
+	.owl-controls{
+		.owl-nav .owl-prev,
+		.owl-nav .owl-next,
+		.owl-dot {
+			cursor: pointer;
+			cursor: hand;
+			user-select: none;
+		}
+	}
+	&.owl-loaded {display: block;}
+	&.owl-loading {
+		opacity: 0;
+		display: block;
+	}
+	&.owl-hidden {
+		opacity: 0;
+	}
+	.owl-refresh .owl-item {
+		display: none;
+	}
+	.owl-item {
+		position: relative;
+		min-height: 1px;
+		float: left;
+		user-select: none;
+		img {
+			display: block;
+			//width: 100%;
+			-webkit-transform-style: preserve-3d;
+		}
+		/* Owl Carousel - Lazy Load Plugin */
+		.owl-lazy {
+		opacity: 0;
+		transition: opacity 400ms ease;
+			img {transform-style: preserve-3d;}
+		}
+	}
+	&.owl-text-select-on .owl-item {user-select: auto;}
+	.owl-grab {cursor: grab;}
+	&.owl-rtl {
+		direction: rtl;
+		&.owl-item {float: right;}
+	}
+	/*.owl-dots{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: @green;
+		}
+		.owl-dot{
+			width: 100%;
+			height: 9px;
+			background-color: @green;
+			transform-origin: center;
+			transition: @trs-site;
+			transform-origin: 0 0;
+			transform: scale(1,0);
+			&.active{
+				transform: scale(1,1);
+			}
+		}
+	}
+	.owl-controls{
+		//position: relative;
+	}*/
+}
+.owl-nav{
+	.owl-prev,
+	.owl-next{
+		.mix-btn-slider();
+		.owl-carousel.owl-reviews &{
+			position: absolute;
+			top: 35%;
+			transform: translate(0%, -50%);
+			@media @media-notsmart {top: 47%;}
+		}
+	}
+	.owl-prev{
+		.owl-carousel.owl-reviews &{
+			left: 0;
+			@media @media-screen {transform: translate(-140%, -50%);}
+			@media @media-size-xxl {left: -5.6vw;}
+		}
+	}
+	.owl-next{
+		.owl-carousel.owl-reviews &{
+			right: 0;
+			@media @media-screen {transform: translate(140%, -50%);}
+			@media @media-size-xxl {right: -5.6vw;}
+		}
+	}
+}
+.owl-dots{
+	.mix-indicators-panel();
+	padding-top: 20px;
+	@media @media-notsmart {
+		position: absolute;
+		bottom: -4vw;
+	}
+}
+.owl-dot{
+	.mix-indicators-item();		
+}
+/*
+.owl-count__{
+	&block{
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		font-family: @b-ff-2;
+		color: @blue;
+		.calcFontSize(18, 23, 320, 1680);
+		.calcLineHeight(20, 26, 320, 1680);
+	}
+	&item{
+		&.is--count{
+			color: @green;
+			.calcFontSize(36, 46, 320, 1680);
+			.calcLineHeight(38, 48, 320, 1680);
+
+		}
+	}
+}
+.owl-swape__{
+	&block{
+		margin-bottom: 10px;
+		padding-left: 40px;
+		position: relative;
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 8;
+		@media @media-notsmart {
+			display: none;
+		}
+	}
+	&icon{
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}*/
+@keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+/*Owl Carousel - Auto Height Plugin*/
+.owl-height {transition: height 500ms ease-in-out;}
+/* No Js */
+.no-js .owl-carousel {display: block;}
+/*custom controls*/
+.owl-block{
+	padding: 0 40px;
+	@media @media-screen {
+		padding: 0 7.5vw;
+	}	
+}
+.owl-center{
+	.owl-item{
+		&::before{
+			content: '';
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transition: @trs-site;
+			background-color: fadeout(@b-color-a, 30%);
+			.brad();
+		}
+		&.center{
+			&::before{
+				z-index: -1;
+				background-color: fadeout(@b-color-a, 100%);
+
+			}
+		}
+	}
+}

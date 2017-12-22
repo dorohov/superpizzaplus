@@ -1,0 +1,154 @@
+<div class="{{block_prefix}}block">
+	<div class="{{block_prefix}}row row  is--gutter  is--wrap">
+		<div class="{{block_prefix}}cols cols  is--cols-screen-7  is--preview">
+			<div id="products-preview" class="{{block_prefix}}carousel carousel slide" data-ride="carousel" data-pause="false">
+				<div class="carousel-inner {{block_prefix}}carousel-inner">
+					<div class="item {{block_prefix}}carousel-item  active">
+						<div class="{{block_prefix}}carousel-img"> 
+							<img src="{{url-path-img}}/temp/products-item1-960x640.jpg" alt="" class="img-responsive">
+						</div>
+					</div>
+					<div class="item {{block_prefix}}carousel-item">
+						<div class="{{block_prefix}}carousel-img"> 
+							<img src="{{url-path-img}}/temp/products-item2-960x640.jpg" alt="" class="img-responsive">
+						</div>
+					</div>
+					<div class="item {{block_prefix}}carousel-item">
+						<div class="{{block_prefix}}carousel-img"> 
+							<img src="http://via.placeholder.com/960x640" alt="" class="img-responsive">
+						</div>
+					</div>
+				</div>
+				<a class="left carousel-control {{block_prefix}}carousel-control btn__slider  is--center  is--prev  is--xl  is--bg" href="#products-preview" data-slide="prev">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="carousel-prev" ]]
+				</a>
+				<a class="right carousel-control {{block_prefix}}carousel-control btn__slider  is--center  is--next  is--xl  is--bg" href="#products-preview" data-slide="next">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="carousel-next" ]]
+				</a>
+				<ol class="{{block_prefix}}indicators-panel  btn__indicators-panel  carousel-indicators">
+					<li data-target="#products-preview" data-slide-to="0" class="{{block_prefix}}indicators-item btn__indicators-item active"></li>
+					<li data-target="#products-preview" data-slide-to="1" class="{{block_prefix}}indicators-item btn__indicators-item"></li>
+					<li data-target="#products-preview" data-slide-to="2" class="{{block_prefix}}indicators-item btn__indicators-item"></li>
+				</ol>
+			</div>
+		</div>	
+		<div class="{{block_prefix}}cols cols  is--cols-screen-5  is--note">
+			<div class="{{block_prefix}}text-block">
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level3.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_1="Меню"
+					level_1_link="{{page.products}}"
+					level_2="Пицца"
+					level_2_link="{{page.products_category}}"
+					level_3="  "
+				]]	 
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}"
+					header_level="h1"
+					header="{{block_heading}}"
+				]]	
+				<div class="{{block_prefix}}energy">Энергетическая ценность: 320 ккал</div>
+				<div class="{{block_prefix}}composition">
+					<div class="{{block_prefix}}composition-elem">
+						<div class="{{block_prefix}}composition-row  row  is--wrap  is--gutter15  is--jcsb  is--aic">
+							<div class="{{block_prefix}}composition-cols  cols">
+								<h5 class="{{block_prefix}}composition-heading  color--white">Состав:</h5>
+							</div>
+							<div class="{{block_prefix}}composition-cols  cols">
+								[[azbntple 
+									tpl="/src/block/site/default/button/button-modal-icon.html"
+									button_prefix="btn-link__" 
+									button_mod="is--icon  is--add"
+									button_target="modal-add-compos"
+									button_name="Добавить ингредиенты" 
+									button_icon="btn-plus" 
+								]]
+							</div>
+						</div>
+					</div>
+					<div class="{{block_prefix}}composition-elem">
+						Бекон,  Брокколи,  Цветная капуста,  Соус Итальянский,  Сыр Моцарелла,  Помидоры, Сыр
+					</div>
+					<div class="{{block_prefix}}composition-elem">
+						<div class="{{block_prefix}}composition-row  row  is--wrap is--nogutter">							
+							[[azbntple 
+								tpl="/src/block/site/default/button/button-icon.html"
+								button_prefix="btn-link__" 
+								button_mod="is--icon  is--remove  is--cream"
+								button_name="Кукуруза" 
+								button_icon="btn-plus" 
+							]]						
+							[[azbntple 
+								tpl="/src/block/site/default/button/button-icon.html"
+								button_prefix="btn-link__" 
+								button_mod="is--icon  is--remove  is--cream"
+								button_name="Шампиньоны" 
+								button_icon="btn-plus" 
+							]]
+						</div>						
+					</div>
+				</div>
+				<div class="{{block_prefix}}filter">		
+					<div class="{{block_prefix}}filter-elem">			
+						[[azbntple 
+							tpl="/src/block/site/default/filter/panel-radio-checkbox.html"
+							block_prefix="filter-panel__"
+							block_mod="is--radio  is--products-card"
+							block_heading="Тесто:"
+							block_radio_id="pasta"
+							block_radio_heading_1="Толстое"
+							block_radio_heading_2="Тонкое"
+							block_checkbox_heading="Добавить сырный кантик"
+						]]
+					</div>		
+					<div class="{{block_prefix}}filter-elem">			
+						[[azbntple 
+							tpl="/src/block/site/default/filter/panel-radio.html"
+							block_prefix="filter-panel__"
+							block_mod="is--radio  is--products-card"
+							block_heading="Вес:"
+							block_radio_id="weight"
+							block_radio_heading_1="1500г"
+							block_radio_heading_2="900г"
+						]]
+					</div>
+				</div>
+				<div class="{{block_prefix}}qty">
+					[[azbntple 
+						tpl="/src/block/site/default/filter/qty-name.html"
+						block_prefix="qty-panel__"
+						block_mod="is--products-card"
+						block_heading="Кол-во:"
+					]]
+				</div>
+				<div class="{{block_prefix}}cost-row  row  is--wrap  is--gutter  is--jcsb  is--aic">
+					<div class="{{block_prefix}}cost-cols cols">
+						<div class="{{block_prefix}}cost">
+							<div class="{{block_prefix}}cost-name">
+								Цена: 
+							</div>
+							<div class="{{block_prefix}}cost-val">
+								250
+								<div class="{{block_prefix}}cost-ruble  {{block_mod}}">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="{{block_prefix}}cost-cols cols">						
+						[[azbntple 
+							tpl="/src/block/site/default/button/button.html"
+							button_prefix="btn__" 
+							button_mod="is--invers"
+							button_name="Отправить в корзину" 
+						]]
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>
+</div>

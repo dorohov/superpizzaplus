@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "
+		]] 	  
+		[[azbntple  
+			tpl="/src/block/site/page/basket/basket.html"
+			content_prefix="content-block__"      
+			content_mod="is--hidden"      
+			block_heading_mod="is--page-heading  is--white-page"
+			block_heading="Корзина"      
+			block_heading_bg="{{url-path-img}}/temp/bg-page-base.jpg"      
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/products/panel-card-include.html"
+			block_prefix="products-panel__" 
+			block_mod="is--panel"
+			block_heading="Не забудьте купить"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/modals/composition.html"
+			modals_prefix="modal-base__" 
+			modals_id="modal-add-compos"
+			modals_mod="is--lg"
+			modals_heading="Добавление ингредиентов"
+			modals_note="  "
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>

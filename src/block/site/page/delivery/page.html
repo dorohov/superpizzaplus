@@ -1,0 +1,36 @@
+<main class="{{content_prefix}}panel  {{content_mod}}"  role="main"> 
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/panel.html"
+		block_prefix="page-header__" 
+		block_mod="{{block_heading_mod}}"
+		block_bg="{{block_heading_bg}}"
+		block_heading="{{block_heading}}"
+	]] 
+	<div class="{{content_prefix}}container container  {{content_mod}}">
+		<div class="{{content_prefix}}elem  is--posr">
+			[[azbntple 
+				tpl="/src/block/site/default/content/panel-delivery.html"
+				block_prefix="content-block__" 
+				block_mod="is--delivery"
+			]] 
+		</div> 
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--line-delivery"  
+		block_bg="bg-line-delivery.png"
+	]]
+	[[azbntple 
+		tpl="8/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--reviews-salad"  
+		block_bg="bg-reviews-salad.png"
+	]]
+	[[azbntple 
+		tpl="8/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--reviews-udon"  
+		block_bg="bg-reviews-udon.png"
+	]]
+</main>

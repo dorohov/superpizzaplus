@@ -1,0 +1,40 @@
+.include-custom-font(
+	@family: @intro, 
+	@src-name: @intro, 
+	@weight: normal, 
+	@style: normal
+	){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-font(
+	@family: @intro,
+	@src-name: @intro,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @amalfi,
+	@src-name: @amalfi,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @flo,
+	@src-name: @flo,
+	@weight: 400, 
+	@style: normal
+	);

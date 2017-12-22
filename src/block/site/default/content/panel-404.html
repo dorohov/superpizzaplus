@@ -1,0 +1,29 @@
+<div class="{{block_prefix}}elem  {{block_mod}}">
+	<div class="{{block_prefix}}row  row  is--wrap  is--gutter  is--aic  {{block_mod}}"> 
+		<div class="{{block_prefix}}cols  cols  is--cols-screen-8  {{block_mod}}  is--preview">
+			<div class="{{block_prefix}}preview  {{block_mod}}  is--left">
+				<img src="{{url-path-img}}/default/404-preview.png" alt="">
+			</div>
+		</div> 
+		<div class="{{block_prefix}}cols  cols  is--cols-screen-4  {{block_mod}}  is--note">
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html" 
+				header_prefix="page-header__" 
+				header_mod="{{block_heading_mod}}"
+				header_level="h1"
+				header="{{block_heading}}"
+			]]
+			<div class="{{block_prefix}}btn  {{block_mod}}">
+				<p>
+					[[azbntple 
+						tpl="/src/block/site/default/button/link.html"
+						button_prefix="btn__" 
+						button_mod="is--sm  is--invers"
+						button_link="{{page.index}}"
+						button_name="Ha главную"
+					]] 
+				</p>
+			</div>
+		</div>
+	</div> 
+</div> 

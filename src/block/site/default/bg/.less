@@ -1,0 +1,304 @@
+.bg-block__{
+	&block{
+		overflow: hidden;
+		position: relative;
+	}
+	&container{
+		position: relative;
+		z-index: 5;
+	}
+	&item{
+		@media @media-point-device {display: none;}
+		position: absolute;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		@media @media-size-mdl {
+			&.is--blog-item{display: none;}
+		}
+		//index		
+		&.is--index-pizza-450{
+			z-index: 1;
+			max-width: 450px;
+			max-height: 450px;
+			width: 25vw;
+			height: 25vw;  
+			top: 26vw;
+			left: -8vw;	
+		}
+		//
+		&.is--products-veget-180{
+			z-index: 1;
+			max-width: 180px;
+			max-height: 450px;
+			width: 10vw;
+			height: 25vw;
+			bottom: 7.5vw;
+			right: -0.5vw;
+		}
+		&.is--products-veget-130{
+			z-index: 1;
+			max-width: 130px;
+			max-height: 190px;
+			width: 8vw;
+			height: 11vw;
+			top: -1vw;
+			right: 0.5vw;
+		}
+		&.is--products-veget-230{
+			z-index: 1;
+			max-width: 230px;
+			max-height: 230px;
+			width: 14vw;
+			height: 14vw;
+			top: 38vw;
+			right: -4.5vw;
+		}
+		&.is--products-veget-245{
+			z-index: 1;
+			max-width: 245px;
+			max-height: 245px;
+			width: 14vw;
+			height: 14vw;
+			top: 58.5vw;
+			left: -2.5vw;
+		}
+		&.is--products-veget-280{
+			z-index: 1;
+			max-width: 280px;
+			max-height: 280px;
+			width: 16vw;
+			height: 16vw;
+			top: -2vw;
+			right: -3.3vw;
+		}
+		&.is--products-veget-295{
+			z-index: 1;
+			max-width: 295px;
+			max-height: 295px;
+			width: 16vw;
+			height: 16vw;
+			bottom: -3.2vw;
+			left: -4.5vw;	
+			&.is--product-cat{
+				bottom: 2.8vw;
+			}
+			&.is--product-calc{
+				bottom: 0vw;
+				left: 0vw;
+			}
+		}
+		&.is--products-veget-300{
+			z-index: 1;
+			max-width: 300px;
+			max-height: 540px;
+			width: 17vw;
+			height: 30vw;
+			bottom: 0vw;
+			right: -2.7vw;		
+		}
+		&.is--products-veget-300-dark{
+			z-index: 1;
+			max-width: 300px;
+			max-height: 300px;
+			width: 17vw;
+			height: 17vw;
+			bottom: 5vw;
+			right: 36vw;	
+		}
+		&.is--products-pizza-800{
+			z-index: 1;
+			max-width: 800px;
+			max-height: 600px;
+			width: 44vw;
+			height: 33vw;
+			bottom: -16.3vw;
+			right: 11.8vw;		
+		}
+		&.is--products-pizza-490{
+			z-index: 1;
+			max-width: 490px;
+			max-height: 490px;
+			width: 27vw;
+			height: 27vw;
+			top: 26.7vw;
+			right: -13vw;	
+		}
+		&.is--products-pizza-450{
+			z-index: 1;
+			max-width: 450px;
+			max-height: 450px;
+			width: 25vw;
+			height: 25vw;
+			top: 26.7vw;
+			right: -13vw;	
+		}
+		&.is--products-pizza-485{
+			z-index: 1;
+			max-width: 485px;
+			max-height: 485px;
+			width: 27vw;
+			height: 27vw;
+			top: 21.7vw;
+			right: -9.5vw;
+		}
+		//action
+		&.is--action-pizza-660{
+			z-index: 1;
+			max-width: 660px;
+			max-height: 600px;
+			width: 36vw;
+			height: 33vw;
+			top: -20vw;
+			left: -10vw;
+		}
+		&.is--action-veget-400{
+			z-index: 1;
+			max-width: 400px;
+			max-height: 500px;
+			width: 22vw;
+			height: 27vw;
+			bottom: -0.8vw;
+			right: -1.5vw;
+		}
+		&.is--action-veget-200{
+			z-index: 1;
+			max-width: 200px;
+			max-height: 100px;
+			width: 11vw;
+			height: 6vw;
+			bottom: 4vw;
+			left: 11vw;
+		}
+		//reviews
+		&.is--reviews-salad{
+			z-index: 1;
+			max-width: 890px;
+			max-height: 1065px;
+			width: 48vw;
+			height: 58vw;
+			top: 19.5vw;
+			right: -28.5vw;
+		}
+		&.is--reviews-pizza{
+			z-index: 1;
+			max-width: 970px;
+			max-height: 1380px;
+			width: 53vw;
+			height: 75vw;
+			top: 35vw;
+			left: -31.5vw;
+		}
+		&.is--reviews-udon{
+			z-index: 1;
+			max-width: 660px;
+			max-height: 660px;
+			width: 36vw;
+			height: 36vw;
+			top: 116.3vw;
+			right: -17vw;
+			@media @media-point-xxl {				
+				right: -5vw;
+			}
+		}
+		&.is--reviews{
+			z-index: 1;
+			max-width: 600px;
+			max-height: 1060px;
+			width: 33vw;
+			height: 58vw;
+			bottom: -7vw;
+			right: -0.5vw;
+			background-position: right center;
+		}
+		&.is--reviews-pizza-485{
+			z-index: 1;
+			max-width: 485px;
+			max-height: 485px;
+			width: 27vw;
+			height: 27vw;
+			top: -17.8vw;
+			right: -1.5vw;
+		}
+		&.is--reviews-pizza-260{
+			z-index: 1;
+			max-width: 260px;
+			max-height: 260px;
+			width: 15vw;
+			height: 15vw;
+			bottom: -6.3vw;
+			left: 2.5vw;
+		}
+		//about
+		&.is--about-veget-310{
+			z-index: 1;
+			max-width: 310px;
+			max-height: 310px;
+			width: 17vw;
+			height: 17vw;
+			top: 73.5vw;
+			right: -2vw;
+			display: none;
+			@media @media-point-xxl {
+				display: block;
+			}
+		}
+		&.is--about-veget-390{
+			z-index: 1;
+			max-width: 390px;
+			max-height: 390px;
+			width: 22vw;
+			height: 22vw;
+			top: 34.5vw;
+			right: -9vw;
+		}
+		&.is--about-arrow{
+			z-index: 1;
+			max-width: 180px;
+			max-height: 180px;
+			width: 10vw;
+			height: 10vw;
+			top: 80.5vw;
+			top: 86%;
+			left: 10vw;
+			display: none;
+			@media @media-point-xxl {
+				display: block;
+			}
+		}
+		//paper
+		&.is--paper-veget-160{
+			z-index: 1;
+			max-width: 160px;
+			max-height: 300px;
+			width: 9vw;
+			height: 17vw;
+			top: 8vw;
+			right: -2vw;
+		}
+		&.is--paper-veget-400{
+			z-index: 1;
+			max-width: 400px;
+			max-height: 250px;
+			width: 22vw;
+			height: 14vw;
+			bottom: -2vw;
+			left: -2vw;
+		}
+
+		//line
+		&.is--line-delivery{
+			z-index: 1;
+			max-width: 1920px;
+			max-height: 1710px;
+			width: 100vw;
+			height: 90vw;
+			top: 10.8%;
+			left: 0;
+			display: none;
+			@media @media-point-xxl {
+				display: block;
+			}
+		}
+	}
+}

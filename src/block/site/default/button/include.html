@@ -1,0 +1,132 @@
+<div style="margin-bottom: 5vw;">	
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading.html" 
+		header_prefix="page-header__" 
+		header_mod="is--heading  is--center"
+		header_level="h1"
+		header="{{block_heading}}"
+	]]	
+	<!-- ** 
+		префиксы:
+			= btn__  				- для кнопок
+			= btn-link__			- для ссылок
+		модификаторы:
+			= по цвету
+				== без модификатора	- основной 
+				== is--invers 		- вспомогательный 
+				== is--white 		- белая 
+			= по размеру
+				== is--lg			- больной
+				== is--sm			- средний
+				== is--xs 			- маленький
+			= по типу контейнера
+				== is--block 		- блоковая
+				== is--form-inline 	- блоковая для горизонтальной формы 
+			= разное 
+				== is--hidden		- прячет кнопку / ссылку
+
+	** -->
+	<!-- Кнопка-ссылка -->
+	<div style="margin-bottom: 10px;">		
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="  "
+			button_target="modal-order"
+			button_name="Отправить в корзину" 
+		]]
+	</div>
+	<div style="margin-bottom: 10px;">		
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="is--sm"
+			button_target="modal-order"
+			button_name="Подробнее" 
+		]]
+	</div>
+	<div style="margin-bottom: 10px;">		
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="  "
+			button_target="modal-message"
+			button_name="Открыть модальку" 
+		]]
+	</div>
+	<div style="margin-bottom: 10px;">		
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="is--invers"
+			button_target="modal-order"
+			button_name="Отправить" 
+		]]
+	</div>
+	<div style="margin-bottom: 10px;">
+		[[azbntple 
+			tpl="/src/block/site/default/button/link.html"
+			button_prefix="btn__" 
+			button_mod="is--white"
+			button_link="{{page.reviews}}"
+			button_name="Все отзывы"
+		]]
+	</div>
+	<div style="margin-bottom: 10px;">
+		[[azbntple 
+			tpl="/src/block/site/default/button/link.html"
+			button_prefix="btn__" 
+			button_mod="is--yellow"
+			button_link="{{page.index}}"
+			button_name="На главную"
+		]]
+	</div>
+	<!-- Кнопка вызова модального окна -->
+	<div style="margin-bottom: 10px;">
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="  "
+			button_target="modal-message"
+			button_name="Отправить"
+		]]
+	</div>
+	<div style="margin-bottom: 10px;">
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="  "
+			button_target="modal-reserv"
+			button_name="Записаться на прием"
+		]]
+	</div>
+	<div style="margin-bottom: 10px;">
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="  "
+			button_target="modal-сonsultation"
+			button_name="Консультация"
+		]]
+	</div>	
+	<!--<div style="margin-bottom: 40px;">
+		[[azbntple 
+			tpl="/src/block/site/default/button/link-icon.html" 
+			button_prefix="btn-link__" 
+			button_mod="is--more"
+			button_link="##"
+			button_name="Подробнее"
+			button_icon="btn-link"
+		]]
+	</div> 	
+	<div style="margin-bottom: 10px; max-width: 470px;">
+		[[azbntple 
+			tpl="/src/block/site/default/button/link-icon.html" 
+			button_prefix="btn-link__" 
+			button_mod="is--download"
+			button_link="##"
+			button_name="Управления по тарифам и ценовой политике Орл.обл. от 20.12.2016 № 1735-т (тарифы населения на 2017г.)"
+			button_icon="icon-download"
+		]]
+	</div> 	-->
+</div>			

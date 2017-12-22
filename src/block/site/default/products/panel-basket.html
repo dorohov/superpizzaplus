@@ -1,0 +1,67 @@
+<div class="{{block_prefix}}panel">
+	<!-- <h3>Ваша корзина пуста!</h3> -->
+	<div class="table-responsive {{block_prefix}}table  ">
+		<table class="table table-bordered  is--lg">
+			<thead>
+				<tr>
+					<th>Фото</th>
+					<th class="is--left">Название</th>
+					<th>Вес, гр</th>
+					<th>Количество, шт</th>
+					<th>Стоимость</th>
+					<th>Удалить</th>
+				</tr>
+			</thead>
+			<tbody>
+				[[azbntple 
+					tpl="/src/block/site/default/products/card-basket.html"
+					block_prefix="products-card__"
+					block_link="{{page.products_item}}"  
+					block_mod="is--table"
+					block_preview="http://via.placeholder.com/455x300"
+					block_heading="Пицца Экзотика с грибами"
+					block_composition="помидоры, свинина, сыр, ананас, лук, грибы"
+					block_composition_base="тонкое"
+					block_weight="900"
+					block_cost="9 000"
+					block_cost_qty="  "
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/products/card-basket.html"
+					block_prefix="products-card__"
+					block_link="{{page.products_item}}"  
+					block_mod="is--table"
+					block_preview="http://via.placeholder.com/455x300"
+					block_heading="Пицца Экзотика с грибами"
+					block_composition="помидоры, свинина, сыр, ананас, лук, грибы"
+					block_composition_base="тонкое"
+					block_weight="900"
+					block_cost="9 000"
+					block_cost_qty="  "
+				]]
+			</tbody>
+		</table>
+	</div>
+	<div class="{{block_prefix}}amount">
+		<div class="{{block_prefix}}amount-row  row  is--wrap  is--gutter15  is--aic">
+			<div class="{{block_prefix}}amount-cols  cols">
+				<div class="{{block_prefix}}amount-count">
+					<span class="{{block_prefix}}amount-count-name">Всего в корзине:</span> 
+					<span>2</span> товара
+				</div>
+			</div>
+			<div class="{{block_prefix}}amount-cols  cols  is--amount">
+				<div class="{{block_prefix}}amount-cost">				
+					<span class="{{block_prefix}}amount-cost-name">Итого:</span>
+					<span class="{{block_prefix}}amount-cost-num azbn7__cart__sum__value">530</span>
+					<div class="{{block_prefix}}amount-cost-ruble  {{block_mod}}">
+						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]
+					</div>
+				</div>
+			</div>
+			<div class="{{block_prefix}}amount-cols  cols  is--btn">
+				<button type="button" class="btn__item  is--sm">Оформить заказ</button>
+			</div>
+		</div>
+	</div>
+</div>

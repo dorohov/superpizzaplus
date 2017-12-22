@@ -1,0 +1,47 @@
+<div class="{{block_prefix}}block">
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading-btn.html" 
+		header_prefix="page-header__" 
+		header_mod="is--index"
+		header_level="h2"
+		header="{{block_heading}}"
+		header_btn_mod="is--sm"
+		header_btn_link="{{page.news}}"
+		header_btn_name="Все новости"		
+	]]
+	<div class="{{block_prefix}}row row  is--wrap  is--gutter">
+		<div class="{{block_prefix}}cols cols  is--cols-4">
+			[[azbntple 
+				tpl="/src/block/site/default/news/card.html" 
+				block_prefix="news-card__"
+				block_mod="is--index"
+				block_link="{{page.news_item}}"
+				block_date="16 октября 2017"
+				block_date_iso="2017-10-16"
+				block_heading="Управляющие компании должны Орловскому энергосбыту 154,9 млн рублей"
+			]] 
+		</div>
+		<div class="{{block_prefix}}cols cols  is--cols-4">
+			[[azbntple 
+				tpl="/src/block/site/default/news/card.html" 
+				block_prefix="news-card__"
+				block_mod="is--index"
+				block_link="{{page.news_item}}"
+				block_date="16 октября 2017"
+				block_date_iso="2017-10-16"
+				block_heading="Ввод в эксплуатацию энергоблока №4 Пермской ГРЭС"
+			]] 
+		</div>
+		<div class="{{block_prefix}}cols cols  is--cols-4">
+			[[azbntple 
+				tpl="/src/block/site/default/news/card.html" 
+				block_prefix="news-card__"
+				block_mod="is--index"
+				block_link="{{page.news_item}}"
+				block_date="16 октября 2017"
+				block_date_iso="2017-10-16"
+				block_heading="В единый платежный документ добавился новый участник"
+			]] 
+		</div>
+	</div>
+</div>

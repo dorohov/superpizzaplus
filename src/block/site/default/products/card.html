@@ -1,0 +1,102 @@
+<div class="{{block_prefix}}item  {{hover_prefix}}block  {{block_mod}}">
+	<div class="{{block_prefix}}preview  {{block_mod}}">
+		<img src="{{block_preview}}" alt="{{block_heading}}"  class="{{hover_prefix}}img  img-responsive">		
+		<div class="{{block_prefix}}status-block">
+			<span class="{{block_prefix}}status">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="filter-fish" ]]
+			</span>
+			<span class="{{block_prefix}}status">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="filter-hot" ]]
+			</span>
+			<span class="{{block_prefix}}status">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="filter-vegan" ]]
+			</span>
+			<span class="{{block_prefix}}status">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="filter-star" ]]
+			</span>
+		</div>
+	</div> 			
+	<h4 class="{{block_prefix}}heading  {{block_mod}}">{{block_heading}}</h4>
+	<div class="{{block_prefix}}energy  {{block_mod}}">Энергетическая ценность: {{block_energy}}</div>
+	<div class="{{block_prefix}}desc-row row">
+		<div class="{{block_prefix}}desc-cols cols  is--desc">
+			<div class="{{block_prefix}}composition  {{block_mod}}  ">{{block_composition}}</div>
+		</div>
+		<div class="{{block_prefix}}desc-cols cols  is--cost">
+			<div class="{{block_prefix}}cost  {{block_mod}}">
+				{{block_cost}}
+				<div class="{{block_prefix}}cost-ruble  {{block_mod}}">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]
+				</div>
+				<div class="{{block_prefix}}cost-qty  {{block_mod}}">{{block_cost_qty}}</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="{{hover_prefix}}item  {{block_mod}}">		
+		<h4 class="{{block_prefix}}heading-hover  {{block_mod}}">{{block_heading}}</h4>
+		<div class="{{block_prefix}}composition-hover  {{block_mod}}  ">{{block_composition}}</div>
+		<div class="{{block_prefix}}filter-block">			
+			<div class="{{block_prefix}}filter">			
+				[[azbntple 
+					tpl="/src/block/site/default/filter/panel-radio.html"
+					block_prefix="filter-panel__"
+					block_mod="is--radio  is--card"
+					block_heading="Вес:"
+					block_radio_id="weight"
+					block_radio_heading_1="1500г"
+					block_radio_heading_2="900г"
+				]]
+			</div>
+			<div class="{{block_prefix}}filter">			
+				[[azbntple 
+					tpl="/src/block/site/default/filter/panel-radio.html"
+					block_prefix="filter-panel__"
+					block_mod="is--radio  is--card"
+					block_heading="Тесто:"
+					block_radio_id="pasta"
+					block_radio_heading_1="Тонкое"
+					block_radio_heading_2="Толствое"
+				]]
+			</div>
+		</div>
+		<div class="{{block_prefix}}basket-block">
+			<div class="{{block_prefix}}hover-row row">
+				<div class="{{block_prefix}}hover-cols cols">
+					<div class="{{block_prefix}}cost-hover  {{block_mod}}">
+						{{block_cost}}
+						<div class="{{block_prefix}}cost-ruble-hover  {{block_mod}}">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]
+						</div>
+					</div>
+				</div>
+				<div class="{{block_prefix}}hover-cols cols">			
+					[[azbntple 
+						tpl="/src/block/site/default/filter/qty.html"
+						block_prefix="qty-panel__"
+						block_mod="{{block_mod}}"
+					]]
+				</div> 
+				<div class="{{block_prefix}}hover-cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-icon.html"
+						button_prefix="btn-icon__" 
+						button_mod="is--yellow  is--basket"
+						button_link="{{page.basket}}"
+						button_icon="basket"
+						button_attr="  "
+					]]
+				</div> 
+			</div>
+		</div>
+		<div class="{{block_prefix}}hover-button">
+			[[azbntple 
+				tpl="/src/block/site/default/button/link.html"
+				button_prefix="btn__" 
+				button_mod="is--white  is--sm"
+				button_link="{{block_link}}"
+				button_name="Подробнее"
+			]]
+		</div>
+	</div> 
+</div>

@@ -1,0 +1,590 @@
+<!-- <div class="panel-group {{block_prefix}}block" id="{{block_parent_id}}"> -->
+<div class="panel-group {{block_prefix}}block">
+	<div class="panel {{block_prefix}}panel">
+		<div class="{{block_prefix}}heading">
+			<a data-toggle="collapse" data-parent="#{{block_parent_id}}" href="#calc-step1"  data-num="01" aria-expanded="true">
+				Выберите основу для пиццы
+				<span class="{{block_prefix}}heading-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-warning" ]]</span>
+			</a>
+		</div>
+		<div class="{{block_prefix}}heading-warning">Для заказа необходимо выбрать обязательный инредиент</div>
+		<div id="calc-step1" class="{{block_prefix}}collapse panel-collapse collapse in">
+			<div class="{{block_prefix}}norm"></div>
+			<div class="{{block_prefix}}content">								
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--radio"
+					block_heading="Основа пышная"
+					block_weight="470"
+					block_cost="25" 
+					block_id="  " 
+				]] 									
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--radio"
+					block_heading="Основа тонкая"
+					block_weight="380"
+					block_cost="20"  
+					block_id="  "
+				]]  
+			</div>
+		</div>
+	</div>
+	<div class="panel {{block_prefix}}panel">
+		<div class="{{block_prefix}}heading">
+			<a data-toggle="collapse" data-parent="#{{block_parent_id}}" href="#calc-step4"  data-num="02" aria-expanded="false">			
+				Выберите соус	
+				<span class="{{block_prefix}}heading-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-warning" ]]</span>
+			</a>
+		</div>
+		<div class="{{block_prefix}}heading-warning">Для заказа необходимо выбрать обязательный инредиент</div>
+		<div id="calc-step4" class="{{block_prefix}}collapse panel-collapse collapse">
+			<div class="{{block_prefix}}norm">Рекомендуемая норма 100-150г</div>
+			<div class="{{block_prefix}}content">						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Томатный прянный"
+					block_weight="50"
+					block_cost="10" 
+					block_id="group--sous-tomatnyj" 
+				]] 					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Итальянский"
+					block_weight="50"
+					block_cost="10" 
+					block_id="group--sous-tomatnyj" 
+				]] 					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="1000 островов"
+					block_weight="50"
+					block_cost="15" 
+					block_id="group--sous-cezar" 
+				]] 					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Тар-Тар"
+					block_weight="50"
+					block_cost="15" 
+					block_id="group--sous-cezar" 
+				]]					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Цезарь"
+					block_weight="50"
+					block_cost="20" 
+					block_id="group--sous-cezar" 
+				]]					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Цезарь рыбный"
+					block_weight="50"
+					block_cost="15" 
+					block_id="group--sous-cezar" 
+				]]					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Сметанный"
+					block_weight="50"
+					block_cost="10" 
+					block_id="group--sous-smetannyj" 
+				]]					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Аджика"
+					block_weight="50"
+					block_cost="20"
+					block_id="group--sous-tomatnyj"  
+				]] 	
+			</div>
+		</div>
+	</div>
+	<div class="panel {{block_prefix}}panel">
+		<div class="{{block_prefix}}heading">
+			<a data-toggle="collapse" data-parent="#{{block_parent_id}}" href="#calc-step2"  data-num="03" aria-expanded="false">
+				Основные ингредиенты
+				<span class="{{block_prefix}}heading-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-warning" ]]</span>
+			</a>
+		</div>
+		<div class="{{block_prefix}}heading-warning">Для заказа необходимо выбрать обязательный инредиент</div>
+		<div id="calc-step2" class="{{block_prefix}}collapse panel-collapse collapse">
+			<div class="{{block_prefix}}content">	
+				<ul class="{{block_prefix}}tabs-list">
+					<li class="{{block_prefix}}tabs-item active">
+						<a href="#calc-meat" class="{{block_prefix}}tabs-link" data-toggle="tab">Мясо</a>
+					</li>
+					<li class="{{block_prefix}}tabs-item">
+						<a href="#calc-fish" class="{{block_prefix}}tabs-link" data-toggle="tab">Рыба</a>
+					</li>
+					<li class="{{block_prefix}}tabs-item">
+						<a href="#calc-sausages" class="{{block_prefix}}tabs-link" data-toggle="tab">Колбасы</a>
+					</li>
+					<li class="{{block_prefix}}tabs-item">
+						<a href="#calc-mushrooms" class="{{block_prefix}}tabs-link" data-toggle="tab">Грибы</a>
+					</li>
+				</ul>
+				<div class="{{block_prefix}}tabs">
+					<div class="{{block_prefix}}tabs-pane active" id="calc-meat">
+						<div class="{{block_prefix}}norm  is--tabs">Рекомендуемая норма 300-400г</div>									
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Грудка жареная"
+							block_weight="40"
+							block_cost="30" 
+							block_id="group--mjaso" 
+						]] 			
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Окорок жареный"
+							block_weight="40"
+							block_cost="40" 
+							block_id="group--mjaso" 
+						]]		
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Шашлык"
+							block_weight="40"
+							block_cost="50" 
+							block_id="group--mjaso" 
+						]]		
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Шаурма"
+							block_weight="40"
+							block_cost="30"
+							block_id="group--mjaso"  
+						]]		
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Язык отварной"
+							block_weight="40"
+							block_cost="50" 
+							block_id="group--mjaso" 
+						]]
+					</div>
+					<div class="{{block_prefix}}tabs-pane " id="calc-fish">
+						<div class="{{block_prefix}}norm  is--tabs">Рекомендуемая норма 300-400г</div>
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Горбуша св/м"
+							block_weight="60"
+							block_cost="100" 
+							block_id="group--ryba-red" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Креветки"
+							block_weight="30"
+							block_cost="135"
+							block_id="group--krevetki"  
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Крабовые палочки"
+							block_weight="60"
+							block_cost="25" 
+							block_id="group--krabovye" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Кальмары"
+							block_weight="60"
+							block_cost="75" 
+							block_id="group--kalmary" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Филе трески"
+							block_weight="60"
+							block_cost="55" 
+							block_id="group--ryba" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Сёмга св/м"
+							block_weight="60"
+							block_cost="170"
+							block_id="group--ryba-red"  
+						]]
+					</div>
+					<div class="{{block_prefix}}tabs-pane " id="calc-sausages">
+						<div class="{{block_prefix}}norm  is--tabs">Рекомендуемая норма 300-400г</div>
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Сервелат"
+							block_weight="50"
+							block_cost="30" 
+							block_id="group--saljami" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Салями"
+							block_weight="50"
+							block_cost="25" 
+							block_id="group--saljami" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Бекон"
+							block_weight="50"
+							block_cost="40" 
+							block_id="group--bekon" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Пеперони"
+							block_weight="30"
+							block_cost="50" 
+							block_id="group--saljami" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Окорок копчёный"
+							block_weight="50"
+							block_cost="40" 
+							block_id="group--mjaso" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Сосики"
+							block_weight="50"
+							block_cost="25" 
+							block_id="group--sosiski" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Ветчина"
+							block_weight="50"
+							block_cost="25" 
+							block_id="group--vetchina" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Колбаски для пиццы"
+							block_weight="50"
+							block_cost="30" 
+							block_id="group--saljami"
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Грудинка копчёная"
+							block_weight="40"
+							block_cost="40" 
+							block_id="group--mjaso" 
+						]]
+					</div>
+					<div class="{{block_prefix}}tabs-pane " id="calc-mushrooms">
+						<div class="{{block_prefix}}norm  is--tabs">Рекомендуемая норма 50-300г</div>
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Свежие шампиньоны"
+							block_weight="50"
+							block_cost="25" 
+							block_id="group--griby" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Жареные шампиньоны"
+							block_weight="50"
+							block_cost="40" 
+							block_id="group--griby" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/basket/card-calc-qty.html"
+							page_prefix="basket-delivery__" 
+							block_prefix="basket-delivery__check-order-" 
+							block_mod="is--pizza-calc  is--checkbox"
+							block_heading="Консервированые шампиньоны"
+							block_weight="50"
+							block_cost="30" 
+							block_id="group--griby" 
+						]]
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel {{block_prefix}}panel">
+		<div class="{{block_prefix}}heading">
+			<a data-toggle="collapse" data-parent="#{{block_parent_id}}" href="#calc-step3"  data-num="04" aria-expanded="false">
+				Дополнительные инредиенты
+				<span class="{{block_prefix}}heading-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-warning" ]]</span>
+			</a>
+		</div>
+		<div class="{{block_prefix}}heading-warning">Для заказа необходимо выбрать обязательный инредиент</div>
+		<div id="calc-step3" class="{{block_prefix}}collapse panel-collapse collapse">
+			<div class="{{block_prefix}}norm">Рекомендуемая норма 100-150</div>
+			<div class="{{block_prefix}}content">					
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Помидоры"
+					block_weight="50"
+					block_cost="20" 
+					block_id="group--pomidory" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Ананас"
+					block_weight="30"
+					block_cost="15" 
+					block_id="group--ananas"
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Маслины"
+					block_weight="20"
+					block_cost="15" 
+					block_id="group--masliny" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Оливки"
+					block_weight="20"
+					block_cost="20" 
+					block_id="group--olivki" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Кукуруза"
+					block_weight="20"
+					block_cost="15" 
+					block_id="group--kukuruza" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Корнишон"
+					block_weight="30"
+					block_cost="20"
+					block_id="group--ogurcy"  
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Лук репчатый"
+					block_weight="30"
+					block_cost="10" 
+					block_id="group--luk" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Перец боларский"
+					block_weight="30"
+					block_cost="15"
+					block_id="group--perec-b"  
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Цветная капуста"
+					block_weight="50"
+					block_cost="15" 
+					block_id="group--kapusta-cv" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Брокколи"
+					block_weight="50"
+					block_cost="20" 
+					block_id="group--brokkoli" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Лист салата"
+					block_weight="30"
+					block_cost="20" 
+					block_id="group--salat" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Помидоры черри"
+					block_weight="30"
+					block_cost="15" 
+					block_id="group--pomidory" 
+				]]  						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Перчик Халапеньо"
+					block_weight="20"
+					block_cost="15" 
+					block_id="group--halapenio" 
+				]]
+			</div>
+		</div>
+	</div>
+	<div class="panel {{block_prefix}}panel  is--warning">
+		<div class="{{block_prefix}}heading">
+			<a data-toggle="collapse" data-parent="#{{block_parent_id}}" href="#calc-step5"  data-num="05" aria-expanded="false">		
+				Выберите сыр		
+				<span class="{{block_prefix}}heading-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-warning" ]]</span>
+			</a>
+		</div>
+		<div class="{{block_prefix}}heading-warning">Для заказа необходимо выбрать обязательный инредиент</div>
+		<div id="calc-step5" class="{{block_prefix}}collapse panel-collapse collapse">
+			<div class="{{block_prefix}}norm">Рекомендуемая норма 100-130г</div>
+			<div class="{{block_prefix}}content">						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Моцарела"
+					block_weight="50"
+					block_cost="30"  
+					block_id="group--mozarella" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Пармезан"
+					block_weight="30"
+					block_cost="40"  
+					block_id="group--parmezan" 
+				]] 						
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-calc-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="is--pizza-calc  is--checkbox"
+					block_heading="Филадельфия"
+					block_weight="60"
+					block_cost="50"  
+					block_id="group--filadelfiya" 
+				]] 	
+			</div>
+		</div>
+	</div>
+</div>

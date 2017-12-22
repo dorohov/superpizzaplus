@@ -1,0 +1,26 @@
+<div class="modal fade {{modals_prefix}}modal" id="{{modals_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog {{modals_prefix}}dialog">
+		<div class="modal-body {{modals_prefix}}body" >
+			<button type="button" class="btn-site  {{modals_prefix}}close  modal-close" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button>
+			<div class="modal-content {{modals_prefix}}content">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/group.html" 
+					header_prefix="page-header__" 
+					header_mod="is--modals"
+					header_level="h4" 
+					header="{{modals_heading}}"
+					header_small_level="div"
+					header_small="{{modals_note}}"
+				]]	
+			</div> 	
+			[[azbntple 
+				tpl="/src/block/site/default/bg/card-plane.html" 
+				block_prefix="bg-plane__"
+				block_mod="is--enter  is--speed-100"	
+				block_bg="bg-plane-enter-blue.png"		
+			]]
+		</div>
+	</div>
+</div>

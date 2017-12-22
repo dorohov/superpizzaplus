@@ -1,0 +1,33 @@
+<tr>
+	<td class="is--basket-preview">
+		<a href="{{block_link}}" class="{{block_prefix}}preview  {{block_mod}}">
+			<img src="{{block_preview}}" class="img-responsive" alt="">
+		</a>
+	</td>
+	<td class="is--basket-note is--left">
+		<h4 class="{{block_prefix}}heading  {{block_mod}}"><a href="{{block_link}}">{{block_heading}}</a></h4>
+		<div class="{{block_prefix}}composition  {{block_mod}}"><span>Состав:</span> {{block_composition}}</div>
+		<div class="{{block_prefix}}composition  {{block_mod}}"><span>Тесто:</span> {{block_composition_base}}</div>
+	</td>
+	<td><div class="{{block_prefix}}weight  {{block_mod}}">{{block_weight}}г</div></td>
+	<td class="is--basket-qty">
+		[[azbntple 
+			tpl="/src/block/site/default/filter/qty.html"
+			block_prefix="qty-panel__"
+			block_mod="is--products-card  is--basket"
+		]]
+	</td>
+	<td class="is--cost">
+		<div class="{{block_prefix}}cost  {{block_mod}}">
+			{{block_cost}}
+			<div class="{{block_prefix}}cost-ruble  {{block_mod}}">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]
+			</div>
+		</div>
+	</td>
+	<td class="is--del">
+		<button type="button" class="btn__icon  is--delete  azbn7__cart__remove_pos__btn" data-product-id="" data-amount="1" data-min-order="1"> 
+			[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="delete-bg" ]]
+		</button>
+	</td>
+</tr> 

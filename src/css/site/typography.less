@@ -1,0 +1,75 @@
+body {
+	font-family: @b-ff;	
+	font-size: @b-fs;
+	line-height: @b-lh;
+
+}
+html.ios{
+	display: none!important;
+}
+h1, h2, h3, h4, h5, h6{ 
+	color: @b-color-h;
+	margin: 0 0 10px; 
+}
+//p{margin: 0 0 10px;}
+i, em{font-style: italic;}
+b, strong{font-weight: 700; color: @black}
+h1{
+	font-family: @b-ff-2;
+	.calcFontSize(60, 140, 320, 1680);
+	.calcLineHeight(40, 100, 320, 1680);
+	font-weight: 400;
+	//font-style: italic;
+	color: @page_header_color;
+}
+h2{
+	font-weight: 400;
+	.calcFontSize(34, 55, 320, 1680);
+	.calcLineHeight(38, 59, 320, 1680);
+}
+h3{
+	.calcFontSize(28, 45, 320, 1680);
+	.calcLineHeight(32, 49, 320, 1680);
+	font-weight: 400;
+}
+h4{
+	font-weight: 400;
+	.calcFontSize(24, 35, 320, 1680);
+	.calcLineHeight(26, 33, 320, 1680);	
+}
+h5{
+	font-weight: 400;
+	.calcFontSize(20, 28, 320, 1680);
+	.calcLineHeight(24, 32, 320, 1680);	
+}
+h6{
+	font-weight: 400;
+	.calcFontSize(16, 19, 320, 1680);
+	.calcLineHeight(20, 23, 320, 1680);	
+}
+ol{
+	margin-left: 30px;
+	li{padding-left: 5px;}
+}
+ul{
+	margin-left: 20px;
+	&.ul-site{
+		li{
+			margin-bottom: 10px; 
+			&:last-child{margin-bottom: 0;}			
+		}
+	}
+}/*
+._tp__{
+	&panel{
+		@media @media-screen{max-width: 960px;}
+	}
+	&row{
+		@media @media-device {flex-wrap: wrap;}
+	}
+	&cols{
+		&.cols-6{
+			@media @media-device {.makeCols(12, 12);}
+		}
+	}
+}*/

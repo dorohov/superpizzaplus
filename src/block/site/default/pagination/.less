@@ -1,0 +1,130 @@
+.pagination-panel__{
+	&block{
+		padding-bottom: 30px;
+		/*padding-top: 30px;
+		padding-bottom: 30px;
+		@media @media-screen {
+			padding-top: 2.6vw;
+			padding-bottom: 2.6vw;
+		}*/
+	}
+	&list{
+		font-weight: 400;
+		list-style: none;
+		margin-top: -(@pagin-gutter + 5px);
+		margin-left: -(@pagin-gutter);
+		margin-right: -(@pagin-gutter);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		//
+		&.is--center{
+			justify-content: center; 
+		}
+	}
+	&item{
+		padding-top: @pagin-gutter + 5px;
+		padding-left: @pagin-gutter;
+		padding-right: @pagin-gutter; 
+	}
+	&link{
+		display: block;
+		position: relative;
+		color: @pagin-color;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		padding: 0 5px;
+		font-size: @b-fs + 4;
+		line-height: @b-lh - 4;
+		&:hover{	
+			color: @pagin-color-h;			
+			//background-color: @pagin-bg;			
+		}
+		&.is--nav{
+			position: relative;
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 6;
+			margin: 0 8px;
+			color: @pagin-color-h;
+			&::before{
+				@media @media-point-notsmart {
+					content: '';
+					position: absolute;
+					top: ~"calc(50% - 0.5px)";
+					height: 1px;color: @brown-light;
+					width: 25px;
+					background-color: @pagin-color-h;
+					transition: @trs-site;
+					color: @pagin-color-h;					
+				}
+			}
+			&:hover{
+				background: none;
+				color: @b-color-a;
+				&::before{
+					background-color: @pagin-color;
+				}
+			}
+		}
+		&.is--prev{
+			@media @media-point-notsmart {
+				padding-left: 35px;
+				&::before{
+					left: 0;
+				}
+			}
+		}
+		&.is--next{
+			@media @media-point-notsmart {
+				padding-right: 35px;
+				&::before{
+					right: 0;
+				}
+			}
+		}
+		.pagination-panel__item.is--active &{
+			color: @pagin-color-h;		
+			cursor: default;
+		}
+		&.is--darken{
+			color: @white;
+			&.is--nav{
+				&::before{
+					background-color: @brown-light;
+				}
+				&:hover{
+					color: @white;
+					&::before{
+						background-color: @white;
+					}
+				}
+			}
+			&.is--nav,
+			.pagination-panel__item.is--active &,
+			&:hover{	
+				color: @brown-light;					
+			}
+		}
+		span{
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&icon{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		svg{display: block;}
+	}
+	/*&line{
+		max-width: 60px;
+		min-width: 20px;
+		width: 4vw;
+		height: 1px;
+		background-color: @b-color-h;
+	}*/
+}

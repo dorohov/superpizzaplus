@@ -1,0 +1,29 @@
+<div>	
+	[[azbntple 
+		tpl="8/src/block/site/default/page-header/heading.html" 
+		header_prefix="page-header__" 
+		header_mod="is--heading  is--center"
+		header_level="h1"
+		header="{{block_heading}}"
+	]]	
+	<!-- ** 
+		префиксы:
+			= page-header__  				- для заголовка
+			= page-header-panel__			- для панели
+	** -->	
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/panel.html"
+		block_prefix="page-header__" 
+		block_mod="is--page-heading  is--white-page"
+		block_bg="{{url-path-img}}/temp/bg-page-base.jpg"
+		block_heading="{{block_heading}} для светлых"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/panel.html"
+		block_prefix="page-header__" 
+		block_mod="is--page-heading  is--black-page"
+		block_bg="{{url-path-img}}/temp/bg-page-base.jpg"
+		block_heading="{{block_heading}} для темных"
+	]]
+	
+</div>			

@@ -1,0 +1,38 @@
+<article class="{{block_prefix}}item  {{block_mod}}">
+	<div class="{{block_prefix}}row row">
+		<div class="{{block_prefix}}cols cols  is--preview">
+			<div class="{{block_prefix}}preview">
+				<img src="http://via.placeholder.com/300x460" alt=""  class="img-responsive"> 
+			</div> 	
+		</div>
+		<div class="{{block_prefix}}cols cols  is--note">
+			<div class="{{block_prefix}}note  {{block_mod}}">
+				<div class="{{block_prefix}}note-row row  is--wrap  is--gutter15">
+					<div class="{{block_prefix}}note-cols cols  is--heading">
+						<h4 class="{{block_prefix}}heading">{{block_heading}}</h4>
+					</div>
+					<div class="{{block_prefix}}note-cols cols  is--date">
+						<time class="{{block_prefix}}date" datetime="{{block_date_iso}}">{{block_date}}</time>
+					</div>
+				</div>
+				<div class="{{block_prefix}}text-block">
+					[[azbntple 
+						tpl="/src/block/site/default/bg/card.html" 
+						block_prefix="bg-block__"
+						block_mod="is--comma-before  is--text"	
+						block_bg="bg-comma-before.png"		
+					]]
+					[[azbntple 
+						tpl="/src/block/site/default/bg/card.html" 
+						block_prefix="bg-block__"
+						block_mod="is--comma-after  is--text"	
+						block_bg="bg-comma-after.png"		
+					]]
+					<div class="{{block_prefix}}text  text__block">
+						{{block_note}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</article>

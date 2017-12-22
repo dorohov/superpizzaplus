@@ -1,0 +1,222 @@
+<form action="#" class="{{block_prefix}}block  {{block_mod}}"  >
+	<div class="{{block_prefix}}step">
+		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+		<input type="hidden" name="f[Форма: {{block_heading}}]">
+		<div class="{{block_prefix}}step-item  is--step1">
+			<h3 class="{{block_prefix}}step-heading">
+				01 Получатель:		
+			</h3>
+			<div class="{{block_prefix}}step-content  is--active">
+				<div class="{{block_prefix}}step-content-inner">
+					<div class="row {{block_prefix}}row  is--wrap  {{block_mod}}">
+						<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-6  is--name">
+							<div class="{{block_prefix}}item">
+								<input type="text" class="{{block_prefix}}control form-control validate[required, custom[onlyLetterSp]]  {{block_mod}}  {{block_color}}" id="{{block_id}}[name]" name="f[Имя]" placeholder="Ваше имя">
+							</div>	
+						</div>
+						<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-6  is--tel">
+							<div class="{{block_prefix}}item">
+								<input type="tel" class="{{block_prefix}}control form-control validate[required, custom[phone]]  {{block_mod}}  {{block_color}}" id="{{block_id}}[tel]" name="f[Телефон]" placeholder="Ваш телефон">
+							</div>	 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}step-item  is--step2">
+			<h3 class="{{block_prefix}}step-heading">
+				02 Доставка:	
+			</h3>
+			<div class="{{block_prefix}}step-content  is--active">
+				<div class="{{block_prefix}}step-content-inner">
+					<ul class="{{block_prefix}}step-tabs">
+						<li class="{{block_prefix}}step-tabs-item active">
+							<a href="#courier" data-toggle="tab" class="{{block_prefix}}step-tabs-link">
+								<span class="{{block_prefix}}step-tabs-icon">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tabs-courier" ]]
+								</span>
+								<span class="{{block_prefix}}step-tabs-name">
+									Курьером 
+									<small>(от 60 мин)</small>
+								</span>
+							</a>
+						</li>
+					</ul>
+					<div class="{{block_prefix}}step-tab-content">
+						<div class="{{block_prefix}}step-tab-pane active" id="courier">
+							<label for="{{block_id}}[datatime]" class="{{block_prefix}}radio-item">
+	                			<input class="{{block_prefix}}radio-input" id="{{block_id}}[datatime]" name="f[Время доставки]" type="checkbox" />
+								<div class="{{block_prefix}}radio-name">
+									Указать время доставки <small>(не менее чем через 1 ч после оформления заказа)</small>
+								</div>
+							</label>
+							<div class="{{block_prefix}}datetime  is--radio">
+								<div class="row {{block_prefix}}row  is--wrap  {{block_mod}}  is--datetime">
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--time">
+										<label for="{{block_id}}[time]" class="{{block_prefix}}datetime-item">
+											<div class="{{block_prefix}}datetime-name">
+												Время доставки <small>(чч:мин)</small>:
+											</div>
+											<input type="text" class="{{block_prefix}}control form-control validate[required]  {{block_mod}}  {{block_color}}  is--time" id="{{block_id}}[time]" name="f[Время доставки]" placeholder="00:00"  data-plugin='timepicki'>
+										</label>
+									</div>	
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--date">
+										<label for="{{block_id}}[date]" class="{{block_prefix}}datetime-item">
+											<div class="{{block_prefix}}datetime-name">
+												Дата доставки:
+											</div>
+											<input type="text" class="{{block_prefix}}control form-control validate[required]  {{block_mod}}  {{block_color}}  is--date" id="{{block_id}}[date]" name="f[Дата доставки]" placeholder=""  data-plugin='datepicker'>
+										</label> 
+									</div>								
+								</div>								
+							</div>
+							<div class="{{block_prefix}}step-delivery">
+								<div class="row {{block_prefix}}row  is--wrap  {{block_mod}}  is--delivery  is--aic">
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--delivery">
+										<h4 class="{{block_prefix}}step-delivery-heading">Куда будем доставлять?</h4>
+									</div>
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--delivery">
+										<label for="{{block_id}}[delivery]" class="{{block_prefix}}radio-item">
+				                			<input class="{{block_prefix}}radio-input" id="{{block_id}}[delivery]" name="f[Доставка в пределах города]" type="radio" />
+											<div class="{{block_prefix}}radio-name">
+												В пределах города
+											</div>
+										</label>
+									</div>
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--delivery">
+										<label for="{{block_id}}[delivery]" class="{{block_prefix}}radio-item">
+				                			<input class="{{block_prefix}}radio-input" id="{{block_id}}[delivery]" name="f[Доставка за город]" type="radio" />
+											<div class="{{block_prefix}}radio-name">
+												За городом Орёл <small>(+50р)</small>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="{{block_prefix}}delivery-city  is--active">	
+								<div class="row {{block_prefix}}row  is--wrap">
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-6  is--delivery-form">
+										<div class="{{block_prefix}}item">
+											<input type="text" class="{{block_prefix}}control form-control validate[required]  {{block_mod}}  {{block_color}}" id="{{block_id}}[street]" name="f[Улица]" placeholder="Улица:">
+										</div>	
+									</div>
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-6  is--delivery-form">
+										<div class="{{block_prefix}}item">
+											<input type="text" class="{{block_prefix}}control form-control validate[required]  {{block_mod}}  {{block_color}}" id="{{block_id}}[house]" name="f[Дом]" placeholder="Дом:">
+										</div>	
+									</div>
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-6  is--delivery-form">
+										<div class="{{block_prefix}}item">
+											<input type="text" class="{{block_prefix}}control form-control  {{block_mod}}  {{block_color}}" id="{{block_id}}[floor]" name="f[Дом]" placeholder="Этаж:">
+										</div>	
+									</div>
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-6  is--delivery-form">
+										<div class="{{block_prefix}}item">
+											<input type="text" class="{{block_prefix}}control form-control   {{block_mod}}  {{block_color}}" id="{{block_id}}[room]" name="f[Квартира/офис]" placeholder="Квартира/офис:">
+										</div>	
+									</div>
+									<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-12  is--delivery-form">
+										<div class="{{block_prefix}}item">
+											<textarea class="{{block_prefix}}control form-control {{block_mod}} {{block_color}}" name="f[Комментарий]" placeholder="Комментарий:"></textarea>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}step-item  is--step3">
+			<h3 class="{{block_prefix}}step-heading">
+				03 Выберите способ оплаты:		
+			</h3>		
+			<div class="{{block_prefix}}step-heading-small">
+				Оплата (за исключением безналичного расчета) производится при получении заказа	
+			</div>		
+			<div class="{{block_prefix}}step-content  is--active">
+				<div class="{{block_prefix}}step-content-inner">
+					<ul class="{{block_prefix}}step-tabs">
+						<li class="{{block_prefix}}step-tabs-item">
+							<a href="#courier" data-toggle="tab" class="{{block_prefix}}step-tabs-link">
+								<span class="{{block_prefix}}step-tabs-icon">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tabs-cash" ]]
+								</span>
+								<span class="{{block_prefix}}step-tabs-name">
+									Наличными
+								</span>
+							</a>
+						</li>
+						<li class="{{block_prefix}}step-tabs-item">
+							<a href="#courier" data-toggle="tab" class="{{block_prefix}}step-tabs-link">
+								<span class="{{block_prefix}}step-tabs-icon">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tabs-card" ]]
+								</span>
+								<span class="{{block_prefix}}step-tabs-name">
+									Банковской картой
+								</span>
+							</a>
+						</li>
+						<li class="{{block_prefix}}step-tabs-item">
+							<a href="#courier" data-toggle="tab" class="{{block_prefix}}step-tabs-link">
+								<span class="{{block_prefix}}step-tabs-icon">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tabs-check" ]]
+								</span>
+								<span class="{{block_prefix}}step-tabs-name">
+									Безналичный расчет
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>					
+		</div>
+		<div class="{{block_prefix}}step-item  is--step4">
+			<h3 class="{{block_prefix}}step-heading">
+				04 Номер дисконтной карты:		
+			</h3>		
+			<div class="{{block_prefix}}step-content  is--active">
+				<div class="{{block_prefix}}step-content-inner">
+					<div class="row {{block_prefix}}row  is--wrap  is--step">
+						<div class="cols {{block_prefix}}cols  {{block_mod}}  is--cols-6  is--discont-form">
+							<div class="{{block_prefix}}item">
+								<input type="text" class="{{block_prefix}}control form-control  {{block_mod}}  {{block_color}}" id="{{block_id}}[discont]" name="f[Номер дисконтной карты]" placeholder="Номер дисконтной карты">
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>					
+		</div>
+		<div class="{{block_prefix}}step-item  is--agreement"  >
+			<div class="rect-switch {{block_prefix}}item  {{block_color}}">
+	            <input class="rect-switch__input validate[required]    {{block_color}}" id="{{block_id}}[processing]" name="f[Согласие на обработку персональных данных]" type="checkbox" checked />
+	            <label for="{{block_id}}[processing]" class="rect-switch__label    {{block_color}}">
+	            	[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-agreement" ]]
+	            </label> 
+				<label for="{{block_id}}[processing]" class="rect-switch__text    {{block_color}}"> 
+					Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+				</label>
+	        </div>	
+        </div>	
+		<div class="{{block_prefix}}total">
+			<div class="row {{block_prefix}}row  is--wrap  {{block_mod}}  is--total">
+				<div class="cols {{block_prefix}}cols  {{block_mod}}  is--total">
+					<div class="{{block_prefix}}total-heading">
+						Общая стоимость заказа с доставкой:  
+						<div class="{{block_prefix}}total-cost">530</div>
+						<div class="{{block_prefix}}total-ruble">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</div>
+					</div>
+				</div>
+				<div class="cols {{block_prefix}}cols  {{block_mod}}  is--total">
+					[[azbntple 
+						tpl="/src/block/site/default/button/button.html"
+						button_prefix="btn__" 
+						button_mod="{{block_btn_mod}}"
+						button_type="submit"
+						button_name="{{block_btn_name}}"
+					]]	
+				</div>
+			</div>
+		</div>
+	</div>
+</form> 

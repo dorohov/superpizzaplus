@@ -1,0 +1,49 @@
+<div class="{{content_prefix}}container container  {{content_mod}}">
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading.html" 
+		header_prefix="page-header__" 
+		header_mod="{{block_heading_mod}}"
+		header_level="h2"
+		header="{{block_heading}}"
+	]]	
+
+	<div class="{{content_prefix}}elem  is--center">
+		[[azbntple 
+			tpl="/src/block/site/default/button/link.html"
+			button_prefix="btn__" 
+			button_mod="is--sm  is--invers  scrollto"
+			button_link="#form-reviews"
+			button_name="Оставить отзыв"
+		]]
+	</div>	
+	<div class="{{content_prefix}}elem">	
+		[[azbntple 
+			tpl="/src/block/site/default/reviews/panel-card.html" 
+			block_prefix="{{block_prefix}}"
+			block_mod="{{block_mod}}"
+		]] 
+	</div>
+	<div class="{{content_prefix}}elem">
+		[[azbntple 
+			tpl="/src/block/site/default/pagination/panel.html" 
+			block_prefix="pagination-panel__"
+			block_mod="is--center  is--darken"
+		]]
+	</div>
+	<div class="{{content_prefix}}elem">
+		[[azbntple 
+			tpl="/src/block/site/default/form/panel-reviews.html" 
+			form_prefix="form-panel__"
+			form_id="form-reviews"
+			form_bg="  "
+			form_mod="is--reviews"
+			form_mod_form="is--cols-12" 
+			form_color="is--darken"
+			form_heading="Хотите оставить свой отзыв?"
+			form_heading_small="Заполните поля ниже и через некоторое время  ваш комментраний появится на нашем сайте"
+			form_id="fcab" 
+			form_btn_name="Оставить отзыв"
+			form_btn_mod="is--sm  is--invers"
+		]] 
+	</div>
+</div>

@@ -1,0 +1,50 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}"  >
+	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+	<input type="hidden" name="f[Форма: {{form_heading}}]">
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
+				<div class="{{form_prefix}}item">
+					<input type="text" class="{{form_prefix}}control form-control validate[required, custom[onlyLetterSp]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[name]" name="f[Имя]" placeholder="Ваше имя">
+					<div class="{{form_prefix}}icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="form-fio" ]]</div>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--tel">
+				<div class="{{form_prefix}}item">
+					<input type="tel" class="{{form_prefix}}control form-control validate[required,custom[phone]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[tel]" name="f[tel]" placeholder="Ваш телефон">
+					<div class="{{form_prefix}}icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="form-tel" ]]</div>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--email">
+				<div class="{{form_prefix}}item">
+					<input type="email" class="{{form_prefix}}control form-control validate[custom[email]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[email]" name="f[email]" placeholder="Ваш E-mail">
+					<div class="{{form_prefix}}icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="form-email" ]]</div>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--note">
+				<div class="{{form_prefix}}item">
+					<input class="{{form_prefix}}control form-control validate[required]  {{form_mod}} {{form_color}}" name="f[Комментарий]" placeholder="Комментарий">
+					<div class="{{form_prefix}}icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="form-note" ]]</div>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--cols-12  is--agreement">
+				<div class="rect-switch {{form_prefix}}item  {{form_color}}">
+	                <input class="rect-switch__input validate[required]    {{form_color}}" id="{{form_id}}[processing]" name="f[Согласие на обработку персональных данных]" type="checkbox" checked />
+	                <label for="{{form_id}}[processing]" class="rect-switch__label    {{form_color}}"></label> 
+					<label for="{{form_id}}[processing]" class="rect-switch__text    {{form_color}}"> 
+						Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+					</label>
+	            </div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="{{form_btn_mod}}"
+					button_type="submit"
+					button_name="{{form_btn_name}}"
+				]]				
+			</div>
+		</div>	
+	</div> 
+</form> 

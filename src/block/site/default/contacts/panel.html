@@ -1,0 +1,42 @@
+<div class="{{block_prefix}}block">
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading.html" 
+		header_prefix="page-header__" 
+		header_mod="{{block_heading_mod}}"
+		header_level="h1"
+		header="{{block_heading}}"
+	]]
+	<div class="{{block_prefix}}item">
+		[[azbntple 
+			tpl="/src/block/site/default/contacts/item-icon-link.html" 
+			block_prefix="kontakty-item__"
+			block_mod="is--icon"
+			block_name="+7 (4862) {{contacts.phone}}"
+			block_link="tel:{{contacts.phone_tel}}"
+			block_attr="  "
+			block_icon="contacts-tel"
+		]]			
+	</div>	
+	<div class="{{block_prefix}}item">
+		[[azbntple 
+			tpl="/src/block/site/default/contacts/item-icon.html" 
+			block_prefix="kontakty-item__"
+			block_mod="is--icon"
+			block_name="{{contacts.address}}"
+			block_link="  "
+			block_attr="  "
+			block_icon="contacts-address"
+		]]			
+	</div>	
+	<div class="{{block_prefix}}item">
+		[[azbntple 
+			tpl="/src/block/site/default/contacts/item-icon.html" 
+			block_prefix="kontakty-item__"
+			block_mod="is--icon"
+			block_name="График работы: {{contacts.clock}}"
+			block_link="  "
+			block_attr="  "
+			block_icon="contacts-clock"
+		]]			
+	</div>	
+</div>

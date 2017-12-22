@@ -1,0 +1,298 @@
+/* .scaleToBottom{
+	animation-name: scaleToBottom;
+	animation-fill-mode: forwards;
+	transform-origin: 0 0;
+	transform: scale(1, 0);
+}
+.scaleToRight{
+	animation-name: scaleToRight;
+	animation-fill-mode: forwards;
+	transform-origin: 0 0;
+	transform: scale(0, 1);
+}
+.scaleToLeft{
+	animation-name: scaleToLeft;
+	animation-fill-mode: forwards;
+	transform-origin: right 0;
+	transform: scale(0, 1) ;
+}
+.fadeIn{
+	animation-name: fadeIn;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.fadeToRightXl{
+	animation-name: fadeToRightXl;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.fadeToRight{
+	animation-name: fadeToRight;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.fadeToRightSm{
+	animation-name: fadeToRightSm;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.fadeToLeftXl{
+	animation-name: fadeToLeftXl;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.fadeToLeft{
+	animation-name: fadeToLeft;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.fadeToBottom{
+	animation-name: fadeToBottom;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.fadeToTop{
+	animation-name: fadeToTop;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+.scrollto{
+	animation-name: scrollto;	
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+.zoom{
+	animation-name: zoom;	
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+.draw-btn-rect{
+	animation: draw-btn-rect 2s linear 1s 1 forwards;
+}
+@keyframes translate-btn {
+	from {
+		transform: translate(0px, -50%);	
+	}
+	50%{
+		transform: translate(5px, -50%);		
+	}
+	to{    
+		transform: translate(0px, -50%);	
+	}
+}
+@keyframes draw-close-round {
+	from {
+		stroke-dashoffset: -400;	
+	}
+	30%{
+		stroke-dashoffset: -400;	
+	}
+	70%{
+		stroke-dashoffset: 0; 
+		stroke:  @blue-light;			
+	}
+	to{    
+	  stroke-dashoffset: 0;
+	  stroke:  @blue-light;	
+	}
+}
+@keyframes draw-close-cancel{
+	from {
+		fill: @blue;
+	}
+	50%{			
+		fill: @blue;
+	}
+	70%{
+	    fill: @white;
+	}
+	to{  
+	    fill: @white;
+	}
+}
+@keyframes draw-close-humb{
+	from {
+		background: @black;
+	}
+	50%{			
+		background: @black;
+	}
+	70%{
+	    background: @white;
+	}
+	to{  
+	    background: @white;
+	}
+}
+@keyframes draw-btn-rect {
+	from {
+		stroke-dashoffset: -1000;		
+	}
+	to{    
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes scrollto {
+	from {
+		transform: translate(-50%, 0);
+	}
+	50%{
+		transform: translate(-50%, -5px);
+	}
+	to {
+		transform: translate(-50%, 0);
+	}
+}
+@keyframes scaleToBottom {
+	from {
+		transform: scale(1, 0);
+	}
+	to {
+		transform: scale(1, 1);
+	}
+}
+@keyframes scaleToRight {
+	from {
+		transform: scale(0, 1);
+	}
+	to {
+		transform: scale(1, 1);
+	}
+}
+@keyframes scaleToLeft {
+	from {
+		transform: scale(0, 1) ;
+	}
+	to {
+		transform: scale(1, 1);
+	}
+}
+@keyframes fadeIn {
+	from {
+		visibility: hidden;
+		opacity: 0;
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+@keyframes fadeToRightXl {
+	from {
+		visibility: hidden;
+		//opacity: 0;
+		transform: translateX(-30px);
+		transform: translateX(-23vw);
+	}
+	to {
+		visibility: visible;
+		//opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeToRight {
+	from {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeToRightSm {
+	from {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateX(-5px);
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeToLeftXl {
+	from {
+		visibility: hidden;
+		//opacity: 0;
+		transform: translateX(30px);
+		transform: translateX(29vw);
+	}
+	to {
+		visibility: visible;
+		//opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeToLeft {
+	from {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeToBottom {
+	from {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@keyframes fadeToTop {
+	from {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@keyframes scaleY {
+	from {
+		transform: scale(1, 0);
+		visibility: hidden;
+	}
+	to {
+		transform: scale(1, 1);
+		visibility: visible;
+	}
+}
+@keyframes scaleX {
+	from {
+		transform: scale(0, 1);
+		visibility: hidden;
+	}
+	to {
+		transform: scale(1, 1);
+		visibility: visible;
+	}
+}
+@keyframes zoom {
+	from {
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+	to {
+		transform: scale(1);
+	}
+} */

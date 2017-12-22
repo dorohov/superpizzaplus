@@ -1,0 +1,37 @@
+<main class="{{content_prefix}}panel  {{content_mod}}"  role="main"> 
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/panel.html"
+		block_prefix="page-header__" 
+		block_mod="{{block_heading_mod}}"
+		block_bg="{{block_heading_bg}}"
+		block_heading="{{block_heading}}"
+	]] 
+	
+	[[azbntple 
+		tpl="/src/block/site/default/reviews/panel.html" 
+		content_prefix="content-block__" 
+		content_mod="is--darken  is--hidden"
+		block_prefix="reviews-panel__" 
+		block_mod="is--darken"
+		block_heading="Хотите оставить свой отзыв?"
+		block_heading_mod="is--heading  is--reviews-heading  color--white"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--reviews-pizza"  
+		block_bg="bg-reviews-pizza.png"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--reviews-salad"  
+		block_bg="bg-reviews-salad.png"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--reviews-udon"  
+		block_bg="bg-reviews-udon.png"
+	]]
+</main>

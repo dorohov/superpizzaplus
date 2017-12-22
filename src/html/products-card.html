@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "
+		]] 	  
+		[[azbntple  
+			tpl="/src/block/site/page/products/card.html"
+			content_prefix="content-block__"      
+			content_mod="is--hidden  is--darken  is--bottom-white"      
+			block_heading_mod="is--products-card  color--white"
+			block_heading="Пицца пикник с беконом"      
+			block_heading_bg="  "      
+		]]				
+		[[azbntple 
+			tpl="/src/block/site/default/products/panel-card-include.html"
+			block_prefix="products-panel__" 
+			block_mod="is--panel"
+			block_heading="С этим товаром покупают"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/modals/composition.html"
+			modals_prefix="modal-base__" 
+			modals_id="modal-add-compos"
+			modals_mod="is--lg"
+			modals_heading="Добавление ингредиентов"
+			modals_note="  "
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>

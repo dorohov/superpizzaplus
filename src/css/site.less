@@ -1,0 +1,34 @@
+@site-name : "site";
+
+/* Подключение fecss */
+@import "./../../../../vendor/azbn.ru/fecss/mixins.less";
+@import "./../../../../vendor/azbn.ru/fecss/reset.less";
+@import "./../../../../vendor/azbn.ru/fecss/var.less";
+
+//@import "./../../../../vendor/azbn.ru/fecss/main.less";
+
+/* Подключение bootstrap */
+/*@import "./../../../../vendor/azbn.ru/bootstrap/bootstrap.less";*/
+
+@import "./bootstrap/bootstrap.less";
+
+/* Подключение стилей сайта */
+@import "@{site-name}/var.less";
+@import "@{site-name}/font.less";
+@import "@{site-name}/typography.less";
+@import "@{site-name}/main.less";
+@import "@{site-name}/maket.less";
+@import "@{site-name}/sprite.less";
+//@import "@{site-name}/azbn.less";
+
+/* Подключение стилей блоков сайта */
+//@import "@{site-name}/block/btn.less";
+//@import "@{site-name}/block/bg.less";
+@import "@{site-name}/block/hamburger.less";
+//@import "@{site-name}/block/animation.less";
+//@import "@{site-name}/block/retina.less";
+//@import "@{site-name}/block/owl.less";
+//@import "@{site-name}/block/validationEngine.jquery.less";
+//@import "@{site-name}/block/scrollbar.jquery.less";
+
+@import "../_/concat.block.less";

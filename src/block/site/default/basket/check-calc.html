@@ -1,0 +1,88 @@
+<div class="{{block_prefix}}check">
+	<div class="{{block_prefix}}check-elem  is--logotip">
+		<div class="{{block_prefix}}check-logotip">
+			[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
+		</div>
+	</div>
+	<div class="{{block_prefix}}check-elem  is--ip">
+		<div class="{{block_prefix}}check-ip">
+			<div class="{{block_prefix}}row  row  is--ip  is--gutter15  is--aic  is--wrap  is--jcsb">
+				<div class="{{block_prefix}}cols cols">ИП Каленова</div>
+				<div class="{{block_prefix}}cols cols">30.05.2017</div>
+			</div>
+		</div>
+	</div>
+	<div class="{{block_prefix}}check-elem  is--order">
+		<div class="{{block_prefix}}check-order">
+			<h5 class="{{block_prefix}}check-order-heading">Состав вашей Супер Пиццы:</h5>
+			<div class="{{block_prefix}}check-order-list">
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-check-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="  "
+					block_heading="Тонкая основа"
+					block_weight="380"
+					block_cost="350"
+				]] 
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-check-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="  "
+					block_heading="Соус томатный пряный"
+					block_weight="150"
+					block_cost="180"
+				]] 
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-check-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="  "
+					block_heading="Шашлык"
+					block_weight="150"
+					block_cost="180"
+				]] 
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-check-qty.html"
+					page_prefix="basket-delivery__" 
+					block_prefix="basket-delivery__check-order-" 
+					block_mod="  "
+					block_heading="Пеперони"
+					block_weight="100"
+					block_cost="180"
+				]] 
+			</div>
+		</div>
+	</div>
+	<div class="{{block_prefix}}check-elem  is--total">
+		<div class="{{block_prefix}}check-total">
+			<div class="{{block_prefix}}check-total-qty-block  is--warning">
+				<div class="{{block_prefix}}check-total-qty">
+					Общий вес: <span>3000</span>г 
+					<div class="{{block_prefix}}check-total-qty-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-warning" ]]</div>
+				</div>			
+				<div class="{{block_prefix}}check-total-qty-warning">
+					Ваша пицца не пропечется, слишком большой вес
+				</div>
+			</div>
+			<div class="{{block_prefix}}row row  is--gutter  is--wrap  is--total  is--aic  is--jcsb">
+				<div class="{{block_prefix}}cols cols  is--total-qty">
+					<div class="{{block_prefix}}check-total-cost  is--calc">
+						Цена: <span class="color--orange">250</span>
+						<div class="{{block_prefix}}check-total-ruble">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</div>
+					</div>
+				</div>
+				<div class="{{block_prefix}}cols cols  is--total-cost">
+						
+					[[azbntple 
+						tpl="/src/block/site/default/button/button.html"
+						button_prefix="btn__" 
+						button_mod="is--sm"
+						button_name="В корзину" 
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

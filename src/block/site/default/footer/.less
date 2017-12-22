@@ -1,0 +1,185 @@
+.footer__{
+	&block{
+		@media print{display: none;}
+		//position: relative;
+		//z-index: 1;
+		font-family: @footer-ff;
+		font-size: @footer-fs - 4;
+		line-height: @footer-lh - 8;
+		font-weight: 400;
+		color: @footer-color;	
+		background-color: @footer-bg;
+		overflow: hidden;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		//@media @media-size-xs-p{text-align: center;}
+		/*@media @media-point-xxs {
+			font-size: @footer-fs - 4px;
+			line-height: @footer-lh - 8px;
+		}*/
+		@media @media-screen-lg {
+			font-size: @footer-fs;
+			line-height: @footer-lh; 
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+		html.msie &{
+			background: @footer-bg;
+		}
+		a,
+		a[href^="tel:"],
+		a[href^="maito:"],
+		a:focus,
+		a[href^="tel:"]:focus,
+		a[href^="maito:"]:focus,
+		a:hover,
+		a[href^="tel:"]:hover,
+		a[href^="maito:"]:hover{
+			color: @footer-color;
+		}
+	}
+	&container{}
+	&row{
+		justify-content: space-between;
+		align-items: center;
+		margin-top: -15px;
+		@media @media-size-xs-p{
+			//align-items: flex-start;
+		}
+		@media @media-device{flex-wrap: wrap;}		
+		@media @media-size-md {
+			margin-left: -10px;
+			margin-right: -10px;	
+		}
+	}
+	&cols{
+		padding-top: 15px;
+		@media @media-size-md {
+			padding-left: 10px;
+			padding-right: 10px;	
+		}
+		&.is--soc,
+		&.is--contacts{
+			@media @media-point-xxl {
+				min-width: 180px;
+			}
+		}
+		&.is--center{
+			margin-right: auto;
+			margin-left: auto;	
+			@media @media-point-device {display: none;}		
+		}
+		&.is--logotip{
+			margin-right: auto;
+			margin-left: auto;
+			@media @media-device-lg {display: none;} 	
+			//@media @media-size-lg {display: none;}	 	
+		}
+		&.is--contacts{}
+		&.is--dorohovdesign{
+			@media @media-point-device {
+				max-width: 105px;
+			}
+			@media @media-point-xs {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+	&copyright{
+		&.is--ip{
+			@media @media-point-xxl {
+				font-size: @footer-fs + 4;
+			}
+		}
+	}
+	&logotip{
+		width: 100%;
+		max-width: 110px;
+		height: 46px;
+		display: block;
+		color: @cream; 
+	}
+	&contacts-row{		
+		align-items: center;
+		@media @media-size-md {
+			margin-left: -10px;
+			margin-right: -10px;	
+		}
+	}
+	&contacts-cols{
+		@media @media-size-md {
+			padding-left: 10px;
+			padding-right: 10px;	
+		}
+	}
+	&contacts{
+		position: relative;
+		//padding-left: 35px;
+		display: inline-block;
+		@media @media-point-smart {
+			font-size: @footer-fs + 0;
+		}
+		@media @media-point-screen-lg {
+			font-size: @footer-fs + 6;
+		}
+	}
+	&dorohovdesign-row{
+		align-items: center;
+		margin-left: -5px;
+		margin-right: -5px;
+		justify-content: flex-end;
+		@media @media-device {
+			justify-content: center;
+			flex-wrap: wrap;
+		}  
+	}
+	&dorohovdesign-cols{
+		padding-left: 5px;
+		padding-right: 5px;
+		@media @media-device {.makeCols(12, 12);}
+		&.is--text{
+			text-align: right;
+		}
+	}
+	&dorohovdesign-text{
+		font-size: @b-fs - 7px;
+		line-height: @b-lh - 12px;
+		//text-transform: uppercase;
+		font-weight: 700;
+		margin-left: auto;
+		//color: @blue-light;
+		html.safari &{
+			@media @media-point-smart {				
+				font-size: @b-fs - 9px;
+			}
+		}
+		@media @media-device{
+			padding-bottom: 2px;
+		    text-align: left;
+		}
+		@media @media-screen {
+			max-width: 60px;
+		}
+		@media @media-size-md {
+			font-size: @b-fs - 10px;
+			line-height: @b-lh - 15px;
+		}
+	}		
+	&dorohovdesign-logotip{		
+		border: none;
+		display: block;
+		//width: 80px;
+		width: 75px;
+		height: 22px;
+		margin:0 auto;
+		@media @media-size-xs {margin: 0 0 0 auto}
+		@media @media-size-md {
+			width: 55px;
+			height: 15px;
+		}
+		&, &:focus, &:hover{
+			//color: @blue-light!important;
+		}	
+	}
+}

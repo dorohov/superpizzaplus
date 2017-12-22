@@ -1,0 +1,139 @@
+<nav class="{{class}} navbar {{navbar_mod}}">
+	<div class="{{navbar_prefix}}inner">
+		<div class="container {{navbar_prefix}}container">
+			<div class="row {{navbar_prefix}}row">
+				<div class="cols {{navbar_prefix}}cols  is--header"> 				
+					<div class="{{navbar_prefix}}header">
+						<div class="row {{navbar_prefix}}row-header ">
+							<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+								<div class="{{navbar_prefix}}hamburger">
+									<button class="{{navbar_prefix}}hamburger-btn hamburger__item" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger__line  is--left"></span>
+										<span class="hamburger__line  is--center"></span>
+										<span class="hamburger__line  is--right"></span>
+									</button>
+								</div>
+							</div>
+							<div class="cols {{navbar_prefix}}cols-header  is--brand">
+								<a class="{{navbar_prefix}}brand" href="{{page.index}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a>
+							</div>
+							<div class="cols {{navbar_prefix}}cols-header  is--tel">
+								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cols {{navbar_prefix}}cols  is--collapse">
+					<div class="{{navbar_prefix}}collapse" >
+						<div class="{{navbar_prefix}}collapse-inner">	
+							<div class="row {{navbar_prefix}}collapse-row">
+								<div class="cols {{navbar_prefix}}collapse-cols cols  is--left">
+									[[azbntple 
+										tpl="/src/block/site/default/button/link.html"
+										button_prefix="btn__" 
+										button_mod="is--yellow  is--sm"
+										button_link="{{page.products_calc}}"
+										button_name="Собери свою пиццу"
+									]]
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-cols cols  is--center">
+									<ul class="{{navbar_prefix}}nav">
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="Главная" 
+											navbar_link="{{page.index}}"
+											navbar_mod="is--index" 
+										]]
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="Меню" 
+											navbar_link="{{page.products}}"
+											navbar_mod="  " 
+										]]	
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="Акции" 
+											navbar_link="{{page.action}}"
+											navbar_mod="  " 
+										]]	
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="Доставка и оплата" 
+											navbar_link="{{page.delivery}}"
+											navbar_mod="  " 
+										]]	
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item-logotip.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="  " 
+											navbar_link="{{page.index}}"
+											navbar_mod="is--logotip" 
+										]]	
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="О компании" 
+											navbar_link="{{page.about}}"
+											navbar_mod="  " 
+										]]	
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="Отзывы"
+											navbar_link="{{page.reviews}}"
+											navbar_mod="  " 
+										]]	
+										[[azbntple 
+											tpl="/src/block/site/default/navbar/item.html" 
+											navbar_prefix="navbar__" 
+											navbar_name="Контакты"
+											navbar_link="{{page.contacts}}"
+											navbar_mod="  " 
+										]]	
+									</ul>
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-cols cols  is--right">
+									<div class="row {{navbar_prefix}}collapse-row  is--jcfe">
+										<div class="cols {{navbar_prefix}}collapse-cols cols  is--town"> 
+											<div class="{{navbar_prefix}}town  dropdown">
+												<button type="bitton" class="{{navbar_prefix}}town-link">Орёл</button>
+												<ul class="{{navbar_prefix}}town-menu dropdown-menu">
+													<li class="{{navbar_prefix}}town-menu-item  is--active"> 
+														<a href="#" class="{{navbar_prefix}}town-menu-link">Орёл</a>
+													</li>
+													<li class="{{navbar_prefix}}town-menu-item">
+														<a href="#" class="{{navbar_prefix}}town-menu-link">Калуга</a>
+													</li>
+													<li class="{{navbar_prefix}}town-menu-item">
+														<a href="#" class="{{navbar_prefix}}town-menu-link">Брянск</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="cols {{navbar_prefix}}collapse-cols cols  is--tel">
+											<div class="{{navbar_prefix}}tel-block">
+												<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">
+													{{contacts.phone}}
+												</a>
+											</div>
+										</div> 
+										<div class="cols {{navbar_prefix}}collapse-cols cols  is--basket">
+											<a href="{{page.basket}}" class="{{navbar_prefix}}basket-icon">
+												[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-bg" ]]
+												<span class="{{navbar_prefix}}basket-icon-label">5</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

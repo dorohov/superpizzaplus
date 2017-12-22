@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body class="is--index-page"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="is--index"     
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/header/panel.html"
+			block_prefix="header-block__"
+			block_slider_id="header-slider"
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/page/index/link.html"
+			content_prefix="content-block__"      
+			content_mod="is--hidden  is--paper  is--bottom-deepdark" 
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/index/page.html"
+			content_prefix="content-block__"      
+			content_mod="is--hidden  is--darken" 
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]  
+	</body>
+</html>

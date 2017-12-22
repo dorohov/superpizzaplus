@@ -1,0 +1,38 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}"  >
+	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+	<input type="hidden" name="f[Форма: {{form_heading}}]">
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
+				<div class="{{form_prefix}}item">
+					<input type="text" class="{{form_prefix}}control form-control validate[required, custom[onlyLetterSp]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[name]" name="f[Имя]" placeholder="Ваше ФИО">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--note">
+				<div class="{{form_prefix}}item">
+					<textarea class="{{form_prefix}}control form-control validate[required]  {{form_mod}} {{form_color}}" name="f[Отзыв]" placeholder="Ваш отзыв"></textarea>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--agreement">
+				<div class="rect-switch {{form_prefix}}item  {{form_color}}">
+	                <input class="rect-switch__input validate[required]    {{form_color}}" id="{{form_id}}[processing]" name="f[Согласие на обработку персональных данных]" type="checkbox" checked />
+	                <label for="{{form_id}}[processing]" class="rect-switch__label    {{form_color}}">
+	                	[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-agreement" ]]
+	                </label> 
+					<label for="{{form_id}}[processing]" class="rect-switch__text    {{form_color}}"> 
+						Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+					</label>
+	            </div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="{{form_btn_mod}}"
+					button_type="submit"
+					button_name="{{form_btn_name}}"
+				]]				
+			</div>
+		</div>	
+	</div> 
+</form> 
