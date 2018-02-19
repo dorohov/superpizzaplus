@@ -533,12 +533,29 @@
 		line-height: @b-lh;
 		border-bottom: 1px solid fadeout(@green, 80%);
 		padding-bottom: 15px;
-   		margin-bottom: 15px;
+		margin-bottom: 15px;
+		
+		display:none;/*azbn*/
+		
+		/*
 		&:last-child{
 			border-bottom: none;
 			margin-bottom: 10px;
 			padding-bottom: 0px;
 		}
+		*/
+		
+		&.azbn__in--cart {
+			display:block;
+			
+			&.azbn__is--last {
+				border-bottom: none;
+				margin-bottom: 10px;
+				padding-bottom: 0px;
+			}
+			
+		}
+		
 		&.is--pizza-calc{
 			cursor: pointer;
 			color: @cream;
