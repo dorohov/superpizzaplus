@@ -535,7 +535,9 @@
 		padding-bottom: 15px;
 		margin-bottom: 15px;
 		
-		display:none;/*azbn*/
+		.__result-builder & {
+			display:none;/*azbn*/
+		}
 		
 		/*
 		&:last-child{
@@ -545,7 +547,7 @@
 		}
 		*/
 		
-		&.azbn__in--cart {
+		.__result-builder &.azbn__in--cart {
 			display:block;
 			
 			&.azbn__is--last {
