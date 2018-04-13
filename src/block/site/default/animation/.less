@@ -219,16 +219,24 @@
 		transform: scale(0.85);
 	}
 }
-.azbn7__in-cart-animation {
-	display:block;
-	position:absolute;
-	background-color:#ffc808;
-	border-radius:50%;
-	width:40px;
-	height:40px;
-	z-index:9999;
-	transition:none;
-	opacity:1;
+.azbn7 {
+	&__in-cart-animation {
+		display:block;
+		position:absolute;
+		background-color:#ffc808;
+		border-radius:50%;
+		width:40px;
+		height:40px;
+		z-index:9999;
+		transition:none;
+		opacity:1;
+	}
+	&__h520 {
+		min-height:auto;
+		@media @media-screen {
+			min-height:520px;
+		}
+	}
 }
 /*
 .link-hover__{
