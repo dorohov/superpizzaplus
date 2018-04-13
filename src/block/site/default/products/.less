@@ -124,6 +124,7 @@
 		}
 		&.is--category{
 			border-radius: 5px;
+			max-width: 375px;
 			&::after{
 				content: '';
 				position: absolute;
@@ -164,6 +165,7 @@
 			margin-bottom: 15px;			
 		}
 		&.is--table{
+			max-width: 235px;
 			@media @media-point-smart {
 				margin-bottom: 10px;
 			}
@@ -199,10 +201,13 @@
 			z-index: 3;
 			bottom: 0;
 			left: 0;
+			padding: 0 5px;
 			width: 100%;
 			text-align: center;
 			color: @white;
 			margin-bottom: 5px;
+			.calcFontSize(28, 40, 320, 1680);
+			.calcLineHeight(28, 36, 320, 1680);
 			&.is--calc{
 				color: @red; 
 			}

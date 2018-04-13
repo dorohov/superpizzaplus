@@ -612,7 +612,8 @@
 			line-height: inherit;
 		}
 		&.is--pizza-calc{
-			color: @cream;
+			//color: @cream;
+			color: @white;
 			small{
 				color: @brown-light;
 			}
@@ -621,7 +622,7 @@
 	&check-order-item-heading-name{
 		&.is--pizza-calc{
 			padding-right: 5px;
-			.calcFontSize(18, 23, 320, 1680);
+			.calcFontSize(18, 25, 320, 1680);
 			.calcLineHeight(22, 27, 320, 1680);
 			.basket-delivery__check-order-item.is--active &{
 				color: @b-color-a;
@@ -2628,6 +2629,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: -1;
+		visibility: hidden;
 	}
 	&radio-name{
 		font-size: @b-fs + 4;
@@ -4512,6 +4514,7 @@ body.rtl .formError .formErrorArrow {
 	}
 	//nav
 	@gutter: 13px;
+	@gutter_lg: 0.8vw;
 	&nav{
 		margin: 0;
 		padding: 0;
@@ -4528,8 +4531,8 @@ body.rtl .formError .formErrorArrow {
 		}
 		@media @media-point-screen-lg {
 			justify-content: center;
-			.calcFontSize(17, 22, 1200, 1680);
-			.calcLineHeight(17, 21, 1200, 1680);
+			.calcFontSize(17, 24, 1200, 1680);
+			.calcLineHeight(17, 24, 1200, 1680);
 		}
 	} 
 	&nav-item{
@@ -4544,6 +4547,8 @@ body.rtl .formError .formErrorArrow {
 			&.is--logotip{display: none;}
 		}
 		@media @media-point-screen-lg {
+			padding-left: @gutter_lg;
+			padding-right: @gutter_lg;
 			&.is--index{display: none;}			
 			&:last-child{
 				margin-bottom: 0px;
@@ -4688,7 +4693,7 @@ body.rtl .formError .formErrorArrow {
 			transform: rotate(-45deg);
 		}
 		@media @media-point-screen-lg {
-			.calcFontSize(20, 24, 1200, 1680);
+			.calcFontSize(20, 25, 1200, 1680);
 			.calcLineHeight(20, 20, 1200, 1680);				
 			.navbar-site.is--index &{
 				color: @b-color-a;
@@ -4821,8 +4826,8 @@ body.rtl .formError .formErrorArrow {
 			height: 2.5vw;
 			min-width: 34px;
 			min-height: 34px;
-			max-width: 40px;
-			max-height: 40px;
+			max-width: 42px;
+			max-height: 42px;
 			margin: 0 0 0 10px; 
 		}
 		&:hover{
@@ -5155,7 +5160,7 @@ body.rtl .formError .formErrorArrow {
 		display: block;
 		&, &:focus, &:hover{color: @b-color}
 		@media @media-screen-lg {
-			//display: none;
+			display: none;
 		}
 	}	
 	&container{
@@ -5354,16 +5359,23 @@ body.rtl .formError .formErrorArrow {
 			background-color: @red;
 			border-radius: 50%;
 			left: 0px;
-			top: 6px;
+			top: 4px;
 			opacity: 0;
 			transition: @trs-site;
 		}
-		.navbar-category__item.is--active &,
+		&.is--inner{
+			font-size: @b-fs + 2;
+			line-height: @b-lh - 2;
+			color: @brown;
+		}
+		.navbar-category__item.is--active > &,
+		.navbar-category__item-inner.is--active > &,
 		&:hover{
 			color: @red;
 		}
 		.navbar-category__item.open &,
-		.navbar-category__item.is--active &{
+		.navbar-category__item.is--active > &,
+		.navbar-category__item-inner.is--active > &{
 			cursor: default;
 			color: @red;
 			padding-left: 20px;
@@ -5371,6 +5383,15 @@ body.rtl .formError .formErrorArrow {
 				opacity: 1;
 			}
 		}
+	}
+	&nav-inner{
+		margin: 20px 0 0 20px;
+		padding: 0;
+		list-style: none;
+	}
+	&item-inner{
+		margin-bottom: 10px;
+		&:last-child{margin-bottom: 0;}
 	}
 	&dropdown-icon{ 
 		width: 10px;
@@ -6152,6 +6173,7 @@ body.rtl .formError .formErrorArrow {
 		}
 		&.is--category{
 			border-radius: 5px;
+			max-width: 375px;
 			&::after{
 				content: '';
 				position: absolute;
@@ -6192,6 +6214,7 @@ body.rtl .formError .formErrorArrow {
 			margin-bottom: 15px;			
 		}
 		&.is--table{
+			max-width: 235px;
 			@media @media-point-smart {
 				margin-bottom: 10px;
 			}
@@ -6227,10 +6250,13 @@ body.rtl .formError .formErrorArrow {
 			z-index: 3;
 			bottom: 0;
 			left: 0;
+			padding: 0 5px;
 			width: 100%;
 			text-align: center;
 			color: @white;
 			margin-bottom: 5px;
+			.calcFontSize(28, 40, 320, 1680);
+			.calcLineHeight(28, 36, 320, 1680);
 			&.is--calc{
 				color: @red; 
 			}
