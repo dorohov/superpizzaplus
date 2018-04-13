@@ -4313,32 +4313,45 @@ body.rtl .formError .formErrorArrow {
 	} 
 	@media @media-screen-lg {
 		color: @navbar-color;
-		position: absolute;
+		position: fixed;
 		top: 0px;
 		left: 0px;
 		width: 100%;
 		z-index: 100; 
 		&.opacity{
-			opacity: 0;
-			transform: translateY(-100%);
-			transition: @trs-site;			
+			//opacity: 0;
+			//transform: translateY(-100%);
+			//transition: @trs-site;			
 		}
 		&.fixed{
-			position: fixed;
-			width: 100%;	
+			//position: fixed;
+			//width: 100%;	
 		}
 		&.scroll-navbar{
-			opacity: 1;
-			transform: translateY(0%);
-			transition: @trs-site;
+			//opacity: 1;
+			//transform: translateY(0%);
+			//transition: @trs-site;
 		}
 		&.is--index{
 			background: linear-gradient(to bottom, 
 				fadeout(@black, 0%) 0%,
 				fadeout(@black, 30%) 45%,
-				fadeout(@black, 100%) 100%);			
+				fadeout(@black, 100%) 100%);
+			position: absolute;			
 			&.opacity{
 				background: @navbar-bg-device;
+				opacity: 0;
+				transform: translateY(-100%);
+				transition: @trs-site;	
+			}
+			&.fixed{
+				position: fixed;
+				width: 100%;	
+			}
+			&.scroll-navbar{
+				opacity: 1;
+				transform: translateY(0%);
+				transition: @trs-site;
 			}
 		}
 	}
@@ -4350,6 +4363,7 @@ body.rtl .formError .formErrorArrow {
 		padding-top: 10px;
 		padding-bottom: 10px; 
 		background: @navbar-bg-device;	
+		transition: @trs-site;
 		@media @media-screen-lg {			
 			background-color: @navbar-bg-screen;
 			padding-top: 20px;
