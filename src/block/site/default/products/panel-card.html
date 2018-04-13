@@ -1,4 +1,14 @@
 <div class="{{block_prefix}}block">
+	[[azbntple 
+		tpl="/src/block/site/default/breadcrumb/level3.html" 
+		bread_prefix="breadcrumb__"
+		bread_mod="  "
+		level_1="Меню"
+		level_1_link="{{page.products}}"
+		level_2="Пицца"
+		level_2_link="{{page.products_category}}"
+		level_3="  "
+	]]
 	<div class="{{block_prefix}}row row  is--gutter  is--wrap">
 		<div class="{{block_prefix}}cols cols  is--cols-screen-7  is--preview">
 			<div id="products-preview" class="{{block_prefix}}carousel carousel slide" data-ride="carousel" data-pause="false">
@@ -33,17 +43,7 @@
 			</div>
 		</div>	
 		<div class="{{block_prefix}}cols cols  is--cols-screen-5  is--note">
-			<div class="{{block_prefix}}text-block">
-				[[azbntple 
-					tpl="/src/block/site/default/breadcrumb/level3.html" 
-					bread_prefix="breadcrumb__"
-					bread_mod="  "
-					level_1="Меню"
-					level_1_link="{{page.products}}"
-					level_2="Пицца"
-					level_2_link="{{page.products_category}}"
-					level_3="  "
-				]]	 
+			<div class="{{block_prefix}}text-block">	 
 				[[azbntple 
 					tpl="/src/block/site/default/page-header/heading.html" 
 					header_prefix="page-header__" 

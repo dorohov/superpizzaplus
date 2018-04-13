@@ -191,9 +191,8 @@
 		align-items: center;
 	   	align-content: center;
 		flex-wrap: wrap;
-		opacity: 0;
-		visibility: hidden;
-		//opacity: 1;
+		//opacity: 0;
+		//visibility: hidden;
 		transition: @trs-site;
 		//.block-hover__block.is--active &,
 		.block-hover__block:hover &{
@@ -1421,7 +1420,7 @@
 			height: 42px;
 			background-color: @yellow;
 			border-radius: 50%;
-			padding: 10px;
+			padding: 10px 10px 10px 7px;
 			color: @red;
 			&,&:focus{
 				color: @red;
@@ -2065,7 +2064,13 @@
 		}
 		&.is--card{
 			background: none;
-			color: @white;			
+			color: @white;
+			&.is--plus{
+				transform: rotate(0);
+				&:hover{
+					transform: rotate(180deg);
+				}
+			}		
 		}
 		&.is--products-card{
 			background: none;
@@ -6450,7 +6455,7 @@ body.rtl .formError .formErrorArrow {
 		padding-right: 25px;
 		color: @white;
 		.calcFontSize(40, 47, 320, 1680);
-		.calcLineHeight(44, 49, 320, 1680);
+		.calcLineHeight(49, 49, 320, 1680);
 		//margin-left: 35px;
 	}
 	&cost-ruble-hover{
@@ -6459,6 +6464,7 @@ body.rtl .formError .formErrorArrow {
 		position: absolute;
 		right: -3px;
 		top: 59%;
+		top: 55%;
 		transform: translateY(-50%);
 		svg{display: block;}
 	}

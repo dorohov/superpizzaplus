@@ -177,7 +177,13 @@
 		}
 		&.is--card{
 			background: none;
-			color: @white;			
+			color: @white;
+			&.is--plus{
+				transform: rotate(0);
+				&:hover{
+					transform: rotate(180deg);
+				}
+			}		
 		}
 		&.is--products-card{
 			background: none;
