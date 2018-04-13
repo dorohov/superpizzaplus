@@ -19,6 +19,9 @@
 				.makeCols(0, 12);
 				padding: 0;
 			}
+			& > *:not(.dropdown):nth-last-child {
+				z-index:-1;
+			}
 		}
 		&.is--list{
 			@media @media-device-lg {
