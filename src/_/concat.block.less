@@ -4197,7 +4197,7 @@ body.rtl .formError .formErrorArrow {
 
 // Kill the scroll on the body
 .modal-open {
-	//overflow: hidden; 
+	overflow: hidden; 
 }
 .modal {
 	display: none;
@@ -4218,10 +4218,10 @@ body.rtl .formError .formErrorArrow {
 		&.fade .modal-dialog {top: 0;}
 		&.in .modal-dialog {top: 5%;}
 	}
-	@media @media-size-mdl{
+	/*@media @media-size-mdl{
 		&.fade .modal-dialog {top: 0;}
 		&.in .modal-dialog {top: 0%;}
-	}
+	}*/
 }
 .modal-open .modal {
 	overflow-x: hidden;
@@ -4245,19 +4245,27 @@ body.rtl .formError .formErrorArrow {
 .modal-dialog {
 	transition: all 0.5s;
 	position: relative;
+	background: @white;
 	@media @media-size-xs 	{width: auto;	margin: 0px;}  
 	@media @media-size-sm 	{width: 620px;	margin: 10px auto;}  
 	@media @media-screen 	{width: 600px;	margin: 0px auto;} 
+	@media @media-notsmart{
+		bottom: 5%;
+		height: 90%;
+		overflow: auto;
+		border-radius: 5px;
+	}
 	 
 }
 .modal-body {
 	position: relative;
-	background: @white;
-	border-radius: 5px;
+	//background: @white;	
 	//color: @black;	
 	@media @media-size-xs{padding: 35px 40px;}	
 	@media @media-size-sm{padding: 70px 60px 50px;}
+	//@media @media-notsmart{border-radius: 5px;}
 	@media @media-screen{padding: 3vw 3.2vw;}
+
 }
 .modal-content{}
 // Title text within header
