@@ -2593,11 +2593,11 @@ $(function(){
 
 			// developer can specify which arrow makes the numbers go up or down
 			var top_arrow_button = (settings.increase_direction === 'down') ?
-				"<div class='prev action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-down'></use></svg></div>" :
-				"<div class='prev action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-up'></use></svg></div>";
+				"<div class='prev action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/local/templates/azbn7theme/img/svg/sprite.svg#arrow-down'></use></svg></div>" :
+				"<div class='prev action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/local/templates/azbn7theme/img/svg/sprite.svg#arrow-up'></use></svg></div>";
 			var bottom_arrow_button = (settings.increase_direction === 'down') ?
-				"<div class='next action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-up'></use></svg></div>" :
-				"<div class='next action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-down'></use></svg></div>";
+				"<div class='next action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/local/templates/azbn7theme/img/svg/sprite.svg#arrow-up'></use></svg></div>" :
+				"<div class='next action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/local/templates/azbn7theme/img/svg/sprite.svg#arrow-down'></use></svg></div>";
 
 			var new_ele = $(
 				"<div class='timepicker_wrap " + settings.custom_classes + "'>" +
