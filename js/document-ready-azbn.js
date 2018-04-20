@@ -37,6 +37,10 @@
 		
 		var ctrl = this;
 		
+		ctrl.__page_products = {
+			
+		};
+		
 		ctrl.get = function(cb) {
 			
 			var method = 'cart/get';
@@ -47,6 +51,7 @@
 				
 				if(resp.response && resp.response.cart && resp.response.cart.positions) {
 					__body.find('.azbn7__cart__positions').html(resp.response.cart.positions);
+					__body.find('.azbn7__cart__positions_word').html(resp.response.cart.positions_word);
 				}
 				
 				ctrl.enableOrderBlocks(null, resp);
@@ -59,7 +64,7 @@
 			
 		}
 		
-		ctrl.add = function(product_id, mod_id, amount, cb) {
+		ctrl.add = function(product_id, mod_id, amount, mod_arr, cb) {
 			
 			var method = 'cart/add';
 			
@@ -67,6 +72,7 @@
 				product : product_id,
 				mod : mod_id,
 				amount : amount,
+				mods : mod_arr || [],
 			}, function(resp){
 				
 				if(resp.response && resp.response.cart && resp.response.cart.positions) {
@@ -81,7 +87,7 @@
 			
 		}
 		
-		ctrl.change = function(product_id, mod_id, amount, cb) {
+		ctrl.change = function(product_id, mod_id, amount, mod_arr, cb) {
 			
 			var method = 'cart/change';
 			
@@ -89,6 +95,28 @@
 				product : product_id,
 				mod : mod_id,
 				amount : amount,
+				mods : mod_arr || [],
+			}, function(resp){
+				
+				if(resp.response && resp.response.cart && resp.response.cart.positions) {
+					__body.find('.azbn7__cart__positions').html(resp.response.cart.positions);
+				}
+				
+				ctrl.enableOrderBlocks(null, resp);
+				
+				cb(resp);
+				
+			});
+			
+		}
+		
+		ctrl.delete = function(product_id, mod_id, cb) {
+			
+			var method = 'cart/delete';
+			
+			new Azbn7__API__Request(method, {
+				product : product_id,
+				mod : mod_id,
 			}, function(resp){
 				
 				if(resp.response && resp.response.cart && resp.response.cart.positions) {
@@ -119,6 +147,44 @@
 			
 		}
 		
+		ctrl.loadPageProducts = function() {
+			
+			var els = __body.find('.azbn7__product');
+			
+			els.each(function(index){
+				
+				var el = $(this);
+				
+				var item_id = parseInt(el.attr('data-product-id') || 0);
+				var item_data = JSON.parse(el.attr('data-product-data') || '{}');
+				
+				if(item_id == item_data.id) {
+					
+					ctrl.__page_products[item_id] = item_data;
+					
+				}
+				
+			});
+			
+		}
+		
+		ctrl.getProductProps = function(id, prop) {
+			
+			var item = null;
+			
+			if(id) {
+				if(ctrl.__page_products[id]) {
+					item = ctrl.__page_products[id];
+					if(prop && item[prop]) {
+						item = item[prop];
+					}
+				}
+			}
+			
+			return item;
+			
+		};
+		
 		return ctrl;
 		
 	}
@@ -128,12 +194,11 @@
 	var Cart = new CartBuilder();
 	
 	
-	
 	$(function(){
 		
+		Cart.loadPageProducts();
 		
 		Cart.get();
-		
 		
 		__body.on('click.azbn7', '.azbn7__select-region-btn', null, function(event){
 			event.preventDefault();
@@ -251,38 +316,43 @@
 				var btn = $(this);
 				var cont = btn.closest(__ns_ + '__product__amount');
 				var value = cont.find('.__value');
+				var imods = cont.find('.__mods');
 				
 				var val = parseInt(value.val() || 0);
 				var product_id = parseInt(cont.attr('data-product-id') || 0);
 				var mod_id = parseInt(cont.attr('data-mod-id') || '');
+				var mods = (imods.val() || '').split(',');
 				
-				Cart.add(product_id, mod_id, val, function(resp){
-					
-					console.dir(resp);
-					
-					value.val(0);
-					
-				});
+				if(val > 0) {
+					Cart.add(product_id, mod_id, val, mods, function(resp){
+						
+						console.dir(resp);
+						
+						value.val(0);
+						
+					});
+					btn.trigger('animation.' + __ns);
+				}
 				
 			});
-
-
-
+			
+			
+			
 			__body.on('click.' + __ns, __ns_ + '__cart__item .__btn', null, function(event){
 				event.preventDefault();
 				
 				var btn = $(this);
 				var cont = btn.closest(__ns_ + '__cart__item');
 				var value = cont.find('.__value');
+				var imods = cont.find('.__mods');
 				
 				var val = parseInt(value.val() || 0);
 				var amount = parseInt(btn.attr('data-amount') || 1);
 				var product_id = parseInt(cont.attr('data-product-id') || 0);
 				var mod_id = parseInt(cont.attr('data-mod-id') || '');
-
-				var method = 'cart/change';
-
-				Cart.change(product_id, mod_id, amount, function(resp){
+				var mods = (imods.val() || '').split(',');
+				
+				Cart.change(product_id, mod_id, amount, mods, function(resp){
 					
 					val = val + amount;
 					
@@ -292,7 +362,8 @@
 					
 					value.val(val);
 					
-					$('.azbn7__cart__positions__value').html(resp.response.cart.positions);
+					$('.azbn7__cart__positions').html(resp.response.cart.positions);
+					$('.azbn7__cart__positions_word').html(resp.response.cart.positions_word);
 					$('.azbn7__cart__sum__value').html(resp.response.cart.sum);
 					
 					if(resp.response.cart && resp.response.cart.items && resp.response.cart.items[product_id] && resp.response.cart.items[product_id][mod_id]) {
@@ -314,16 +385,11 @@
 				var product_id = parseInt(cont.attr('data-product-id') || 0);
 				var mod_id = parseInt(cont.attr('data-mod-id') || '');
 				
-				var method = 'cart/delete';
-
-				new Azbn7__API__Request(method, {
-					product : product_id,
-					mod : mod_id,
-				}, function(resp){
+				Cart.delete(product_id, mod_id, function(resp){
 					
-					console.log(resp);
-					
-					$('.azbn7__cart__positions__value').html(resp.response.cart.positions);
+					//$('.azbn7__cart__positions__value').html(resp.response.cart.positions);
+					$('.azbn7__cart__positions').html(resp.response.cart.positions);
+					$('.azbn7__cart__positions_word').html(resp.response.cart.positions_word);
 					$('.azbn7__cart__sum__value').html(resp.response.cart.sum);
 					
 					Cart.enableOrderBlocks(null, resp);
@@ -350,7 +416,7 @@
 			});
 			
 			
-			__body.on('click.' + __ns, __ns_ + '__to-cart-animation', null, function(event){
+			__body.on('animation.' + __ns, __ns_ + '__to-cart-animation', null, function(event){
 				event.preventDefault();
 				
 				var btn = $(this);
@@ -391,20 +457,118 @@
 			});
 			
 			
+			
+			
+			//azbn7__modifier " data-product-id="2077" data-product-data="{&quot;id&quot;:&quot;2077&quot;,&quot;cost&quot;:&quot;0&quot;,&quot;weight&quot;:&quot;0&quot;}"
+			
+			__body.on('click.' + __ns, __ns_ + '__modifier', null, function(event){
+				event.preventDefault();
+				
+				var btn = $(this);
+				
+				var _is_radio = btn.hasClass('_radio');
+				var _section = 0;
+				if(_is_radio) {
+					_section = parseInt(btn.attr('data-product-section') || 0);
+				}
+				
+				var item_id = parseInt(btn.attr('data-product-id') || 0);
+				var item_data = JSON.parse(btn.attr('data-product-data') || '{}');
+				
+				if(item_data.id == item_id) {
+					
+					var cont = __body.find(__ns_ + '__product__amount').eq(0);
+					
+					var imods = cont.find('.__mods');
+					var mods_ids = (imods.val() || '').split(',');
+					
+					for(var i = 0; i < mods_ids.length; i++) {
+						if(mods_ids[i] == '' || typeof mods_ids[i] == 'undefined' || mods_ids[i] == null) {
+							//delete mods_ids[i];
+							mods_ids.splice(i, 1);
+						}
+					}
+					
+					var has_item = false;
+					
+					for(var i = 0; i < mods_ids.length; i++) {
+						if(mods_ids[i] == item_data.id) {
+							has_item = true;
+							mods_ids.splice(i, 1);
+						}
+					}
+					
+					if(!_is_radio) {
+						
+						if(has_item == false) {
+							
+							mods_ids.push(item_data.id);
+							
+							__body.find(__ns_ + '__modifier._to_delete[data-product-id="' + item_data.id + '"]').fadeIn('fast');
+							
+						} else {
+							
+							__body.find(__ns_ + '__modifier._to_delete[data-product-id="' + item_data.id + '"]').hide();
+							__body.find(__ns_ + '__modifier[data-product-id="' + item_data.id + '"]').removeClass('is--active');
+							
+						}
+						
+					} else {
+						
+						mods_ids.push(item_data.id);
+						
+						var _other = __body.find(__ns_ + '__modifier._radio[data-product-section="' + _section + '"]:not([data-product-id="' + item_data.id + '"])');
+						
+						_other.each(function(index){
+							
+							var _el = $(this);
+							var _el_id = parseInt(_el.attr('data-product-id') || 0);
+							
+							for(var i = 0; i < mods_ids.length; i++) {
+								if(mods_ids[i] == _el_id) {
+									mods_ids.splice(i, 1);
+								}
+							}
+							
+							_el.find('.is--radio.is--active').removeClass('is--active');
+							
+						})
+						
+					}
+					
+					
+					
+					var mod_sum = 0;
+					var mod_uid = 0;
+					
+					var s_sum = parseInt(Cart.getProductProps(cont.attr('data-product-id'), 'cost'));
+					
+					mod_sum = mod_sum + s_sum;
+					mod_uid = parseInt(cont.attr('data-product-id') || 0) * 100000;
+					
+					for(var i = 0; i < mods_ids.length; i++) {
+						
+						var _item_sum = parseInt(Cart.getProductProps(mods_ids[i], 'cost'));
+						
+						mod_sum = mod_sum + _item_sum;
+						mod_uid = mod_uid + parseInt(mods_ids[i]);
+						
+					}
+					
+					__body.find(__ns_ + '__product__cost_sum').html(mod_sum);
+					
+					cont.attr('data-mod-id', mod_uid);
+					
+					imods.val(mods_ids.join(','));
+					
+				}
+				
+			});
+			
+			__body.find(__ns_ + '__modifier._to_delete').hide();
+			__body.find(__ns_ + '__modifier._radio[data-product-section="240"]').eq(0).trigger('click');
+			
 		})();
-		
-		
-		
-		
-		
-		
-		
-		/*
-		
-		
-		
-		*/
-		
 		
 		
 		
