@@ -517,6 +517,8 @@
 						
 						mods_ids.push(item_data.id);
 						
+						btn.find('.filter-card__panel').addClass('is--active');
+						
 						var _other = __body.find(__ns_ + '__modifier._radio[data-product-section="' + _section + '"]:not([data-product-id="' + item_data.id + '"])');
 						
 						_other.each(function(index){
