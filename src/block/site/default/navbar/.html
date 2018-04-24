@@ -18,7 +18,11 @@
 								<a class="{{navbar_prefix}}brand" href="{{page.index}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a>
 							</div>
 							<div class="cols {{navbar_prefix}}cols-header  is--tel">
-								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</a>
+								<a href="{{page.basket}}" class="{{navbar_prefix}}basket-icon">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-bg" ]]
+									<span class="{{navbar_prefix}}basket-icon-label  azbn7__cart__positions">5</span>
+								</a>
+								<!--<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</a>-->
 							</div>
 						</div>
 					</div>
@@ -27,6 +31,26 @@
 					<div class="{{navbar_prefix}}collapse" >
 						<div class="{{navbar_prefix}}collapse-inner">	
 							<div class="row {{navbar_prefix}}collapse-row">
+								<div class="cols {{navbar_prefix}}collapse-cols cols  is--icon">
+									<div class="{{navbar_prefix}}icon-block">
+										<div class="{{navbar_prefix}}town  dropdown">
+											<button type="button" class="{{navbar_prefix}}icon-card  azbn__town-link">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-address" ]]</button>
+											<ul class="{{navbar_prefix}}town-menu dropdown-menu  is--icon">
+												<li class="{{navbar_prefix}}town-menu-item  is--active"> 
+													<a href="#" class="{{navbar_prefix}}town-menu-link">Орёл</a>
+												</li>
+												<li class="{{navbar_prefix}}town-menu-item">
+													<a href="#" class="{{navbar_prefix}}town-menu-link">Калуга</a>
+												</li>
+												<li class="{{navbar_prefix}}town-menu-item">
+													<a href="#" class="{{navbar_prefix}}town-menu-link">Брянск</a>
+												</li>
+											</ul>
+										</div>
+										<a href="{{page.products_calc}}" class="{{navbar_prefix}}icon-card">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-pizza" ]]</a>
+										<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}icon-card">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</a>
+									</div>
+								</div>
 								<div class="cols {{navbar_prefix}}collapse-cols cols  is--left">
 									[[azbntple 
 										tpl="/src/block/site/default/button/link.html"
@@ -100,7 +124,7 @@
 									<div class="row {{navbar_prefix}}collapse-row  is--jcfe">
 										<div class="cols {{navbar_prefix}}collapse-cols cols  is--town"> 
 											<div class="{{navbar_prefix}}town  dropdown">
-												<button type="bitton" class="{{navbar_prefix}}town-link">Орёл</button>
+												<button type="button" class="{{navbar_prefix}}town-link  azbn__town-link">Орёл</button>
 												<ul class="{{navbar_prefix}}town-menu dropdown-menu">
 													<li class="{{navbar_prefix}}town-menu-item  is--active"> 
 														<a href="#" class="{{navbar_prefix}}town-menu-link">Орёл</a>

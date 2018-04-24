@@ -449,6 +449,9 @@
 		&.is--order-name{
 
 		}
+		&.is--cost{
+			white-space: nowrap;
+		}
 	}
 	//check
 	&check{
@@ -631,6 +634,7 @@
 			color: @white;
 			small{
 				color: @brown-light;
+				white-space: nowrap;
 			}
 		} 
 	}
@@ -1513,7 +1517,7 @@
 		padding: 30px 20px;
 		@media @media-point-screen {
 			margin-top: 3vw;
-			padding: 3vw 6vw;
+			padding: 3vw 5vw;
 			max-width: 660px;
 		}
 	}
@@ -2142,6 +2146,13 @@
 		font-size: @b-fs + 10;
 		border-radius: 0;
 		margin: 0 4px;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-moz-appearance: none;
+			-webkit-appearance: none;
+		}
 		&.is--card{			
 			background: none;
 			color: @white;			
@@ -2158,6 +2169,7 @@
 		&.is--calc{
 			background: none;
 			color: @brown-light;
+			width: 20px;
 			height: 20px;
 			border-top: 1px solid @brown-light;
 			border-bottom: 1px solid @brown-light;
@@ -4521,8 +4533,16 @@ body.rtl .formError .formErrorArrow {
 			padding-top: 20px;
 			.makeCols(12, 12);
 		}
+		&.is--icon{
+			@media @media-point-screen-lg {
+				display: none;
+			}
+		}
 		&.is--left{
-			@media @media-point-device-lg {order: 2;}
+			@media @media-point-device-lg {
+				order: 2;
+				display: none;
+			}
 			@media @media-point-xxl {
 				//.makeCols(3, 12);
 			}
@@ -4531,7 +4551,10 @@ body.rtl .formError .formErrorArrow {
 			@media @media-point-device-lg {order: 1;}
 		}
 		&.is--right{		
-			@media @media-point-device-lg {order: 3;}	
+			@media @media-point-device-lg {
+				order: 3;
+				display: none;
+			}	
 			@media @media-point-xxl {
 				//.makeCols(3, 12);
 			}
@@ -4554,6 +4577,20 @@ body.rtl .formError .formErrorArrow {
 				//min-width: 250px;
 			}
 		}
+		&.is--basket{
+			@media @media-point-device-lg {display: none;}		
+		}
+	}
+	//icon
+	&icon-block{
+		display: flex;
+		justify-content: space-between;
+	}
+	&icon-card{
+		.btn-clearfix();
+		display: block;
+		width: 40px;
+		height: 40px;
 	}
 	//nav
 	@gutter: 13px;
@@ -4782,6 +4819,15 @@ body.rtl .formError .formErrorArrow {
 		//transform: scale(1, 0);
 		display: none;
 		opacity: 0;
+		&.is--icon{
+			@media @media-point-device-lg {
+				position: absolute;
+				padding: 20px 20px 20px;
+				background-color: @white;
+				min-width: 110px;
+				top: 120%;
+			}
+		}
 		@media @media-point-screen-lg {
 			display: block;
 			position: absolute;
@@ -4859,9 +4905,9 @@ body.rtl .formError .formErrorArrow {
 		.btn-clearfix();
 		width: 36px;
 		height: 36px;
-		display: inline-block;
+		display: block;
 		color: @navbar-btn;
-		margin: 0 10px 0 0;
+		//margin: 0 10px 0 0;
 		transition: @trs-site;
 		position: relative;
 		@media @media-screen-lg {
@@ -6152,6 +6198,12 @@ body.rtl .formError .formErrorArrow {
 				@media @media-point-device-lg {
 					.makeCols(12, 12);
 				}
+				@media @media-point-tablet {
+					.makeCols(6, 12);
+				}
+				@media @media-point-md2 {
+					.makeCols(6, 12);
+				}
 			}
 			&.is--calc-svg{	
 				@media @media-point-device-lg {
@@ -6161,6 +6213,20 @@ body.rtl .formError .formErrorArrow {
 			}
 			&.is--calc-check{
 				@media @media-point-device-lg {
+					.makeCols(12, 12);
+				}
+				@media @media-point-tablet {
+					.makeCols(6, 12);
+				}
+				@media @media-point-md2 {
+					.makeCols(6, 12);
+				}
+			}
+		}
+		&.is--cols-6{
+			&.is--calc-note,
+			&.is--calc-check{
+				@media @media-point-smart {
 					.makeCols(12, 12);
 				}
 			}
@@ -6828,10 +6894,10 @@ body.rtl .formError .formErrorArrow {
 		}
 	}
 	&collapse{
-		@media @media-point-screen {
+		//@media @media-point-screen {
 			display: block;
 			height: auto!important;
-		}
+		//}
 	}
 	&norm{
 		padding-top: 5px;

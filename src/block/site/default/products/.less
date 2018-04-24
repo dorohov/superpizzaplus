@@ -59,6 +59,12 @@
 				@media @media-point-device-lg {
 					.makeCols(12, 12);
 				}
+				@media @media-point-tablet {
+					.makeCols(6, 12);
+				}
+				@media @media-point-md2 {
+					.makeCols(6, 12);
+				}
 			}
 			&.is--calc-svg{	
 				@media @media-point-device-lg {
@@ -68,6 +74,20 @@
 			}
 			&.is--calc-check{
 				@media @media-point-device-lg {
+					.makeCols(12, 12);
+				}
+				@media @media-point-tablet {
+					.makeCols(6, 12);
+				}
+				@media @media-point-md2 {
+					.makeCols(6, 12);
+				}
+			}
+		}
+		&.is--cols-6{
+			&.is--calc-note,
+			&.is--calc-check{
+				@media @media-point-smart {
 					.makeCols(12, 12);
 				}
 			}
@@ -735,10 +755,10 @@
 		}
 	}
 	&collapse{
-		@media @media-point-screen {
+		//@media @media-point-screen {
 			display: block;
 			height: auto!important;
-		}
+		//}
 	}
 	&norm{
 		padding-top: 5px;

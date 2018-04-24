@@ -239,6 +239,13 @@
 		font-size: @b-fs + 10;
 		border-radius: 0;
 		margin: 0 4px;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-moz-appearance: none;
+			-webkit-appearance: none;
+		}
 		&.is--card{			
 			background: none;
 			color: @white;			
@@ -255,6 +262,7 @@
 		&.is--calc{
 			background: none;
 			color: @brown-light;
+			width: 20px;
 			height: 20px;
 			border-top: 1px solid @brown-light;
 			border-bottom: 1px solid @brown-light;
