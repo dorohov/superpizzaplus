@@ -46,8 +46,7 @@
 			transform: translate(50%, -50%);
 			color: @bread_color;
 		}
-		&.is--active{
-			font-style: italic;
+		&.is--active{			
 			color: @bread_color_active;
 			&::before{display: none}		
 		}
@@ -55,6 +54,11 @@
 	&list-link{
 		&, &:focus{color: @bread_color;}
 		&:hover{color: @bread_color_active}
+		.breadcrumb__list-item.is--active &{
+			color: @bread_color_active;
+			cursor: default;
+			font-weight: 700;
+		}
 	}
 	/*&list-icon{
 		width: 15px;

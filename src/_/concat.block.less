@@ -1077,8 +1077,7 @@
 			transform: translate(50%, -50%);
 			color: @bread_color;
 		}
-		&.is--active{
-			font-style: italic;
+		&.is--active{			
 			color: @bread_color_active;
 			&::before{display: none}		
 		}
@@ -1086,6 +1085,11 @@
 	&list-link{
 		&, &:focus{color: @bread_color;}
 		&:hover{color: @bread_color_active}
+		.breadcrumb__list-item.is--active &{
+			color: @bread_color_active;
+			cursor: default;
+			font-weight: 700;
+		}
 	}
 	/*&list-icon{
 		width: 15px;
@@ -5637,6 +5641,12 @@ body.rtl .formError .formErrorArrow {
 	}
 	&btn{}
 }
+.heading-mixin(){
+	font-family: @b-ff-2;
+	.calcFontSize(60, 96, 320, 1680);
+	.calcLineHeight(50, 60, 320, 1680);
+	font-weight: 400;	
+}
 .page-header__{	
 	&panel{
 		&.is--page-heading{
@@ -5706,47 +5716,8 @@ body.rtl .formError .formErrorArrow {
 		&.is--contacts{
 			@media @media-point-device {
 				margin-bottom: 40px;
-				//margin-bottom: 2.2vw;
 			}		
-		}	
-
-		//old
-		/*&.is--heading-card{
-			margin-bottom: 20px;
-			@media @media-screen {margin-bottom: 1.7vw;} 
 		}
-		&.is--card{
-			margin-bottom: 25px;
-			@media @media-screen {margin-bottom: 1.55vw;} 
-		}
-		&.is--index{
-			@media @media-screen {
-				margin-bottom: 1.8vw;
-				margin-bottom: 35px;
-			} 
-		}
-		&.is--index-panel{
-			@media @media-screen {margin-bottom: 3.2vw;} 
-		}
-		&.is--search{
-			@media @media-screen {
-				margin-bottom: 1.5vw;
-			}
-		}
-		&.is--subscribe{
-			margin-bottom: 20px;
-			@media @media-screen {
-				margin-bottom: 10px;			
-			}	
-		}	
-		&.is--procurement{
-			max-width: 1040px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		&.is--mb0{
-			margin-bottom: 0;
-		}*/
 
 	}
 	&inner{
@@ -5778,10 +5749,10 @@ body.rtl .formError .formErrorArrow {
 			margin-bottom: 0;
 		}		
 		&.is--action{
-			font-family: @b-ff-2;
-			.calcFontSize(60, 96, 320, 1680);
-			.calcLineHeight(30, 60, 320, 1680);
-			font-weight: 400;
+			.heading-mixin();
+		}
+		&.is--products-card{
+			.heading-mixin();		
 		}
 		&.is--center{
 			text-align: center;
@@ -5802,12 +5773,6 @@ body.rtl .formError .formErrorArrow {
 			.calcLineHeight(38, 59, 320, 1680);
 			font-weight: 400;
 		}
-		&.is--products-card{
-			font-family: @b-ff-2;
-			.calcFontSize(60, 94, 320, 1680);
-			.calcLineHeight(30, 60, 320, 1680);	
-			font-weight: 400;		
-		}
 		&.is--panel{
 			font-family: @b-ff-2;
 			.calcFontSize(60, 114, 320, 1680);
@@ -5820,11 +5785,8 @@ body.rtl .formError .formErrorArrow {
 			.calcLineHeight(24, 34, 320, 1680);	
 			color: @b-color-a;
 		}
-		&.is--404{
-			font-family: @b-ff-2;
-			.calcFontSize(60, 94, 320, 1680);
-			.calcLineHeight(30, 60, 320, 1680);	
-			font-weight: 400;
+		&.is--404{			
+			.heading-mixin();
 			color: @brown-light;
 			@media @media-point-device {
 				text-align: center;
