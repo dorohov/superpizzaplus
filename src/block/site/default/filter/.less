@@ -113,6 +113,9 @@
 				}
 			}
 		}
+		&.is--town{
+			margin-bottom: 10px;
+		}
 	}
 	&name{
 		&.is--radio{}
@@ -127,6 +130,15 @@
 				color: @brown-light;
 			}
 		}
+		&.is--town{
+			.calcFontSize(22, 25, 320, 1680);
+			.calcLineHeight(22, 25, 320, 1680);
+			color: @brown-light;
+			&.is--active, 
+			&:hover{
+				color: @red;
+			}
+		}
 	}
 	&line{
 		&.is--list{
@@ -138,6 +150,7 @@
 	&cost{
 		font-size: @b-fs - 2;
 		color: @brown-light;		
+		white-space: nowrap;
 	}
 }
 .qty-panel__{
