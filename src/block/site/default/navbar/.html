@@ -34,7 +34,12 @@
 								<div class="cols {{navbar_prefix}}collapse-cols cols  is--icon">
 									<div class="{{navbar_prefix}}icon-block">
 										<div class="{{navbar_prefix}}town  dropdown">
-											<button type="button" class="{{navbar_prefix}}icon-card  azbn__town-link">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-address" ]]</button>
+											<button type="button" class="{{navbar_prefix}}icon-card  azbn__town-link">
+												<div class="{{navbar_prefix}}icon-card-icon">
+													[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-address" ]]
+												</div>
+												<div class="{{navbar_prefix}}icon-card-name">Ваш город:<br> Калуга</div>
+											</button>
 											<ul class="{{navbar_prefix}}town-menu dropdown-menu  is--icon">
 												<li class="{{navbar_prefix}}town-menu-item  is--active"> 
 													<a href="#" class="{{navbar_prefix}}town-menu-link">Орёл</a>
@@ -47,8 +52,18 @@
 												</li>
 											</ul>
 										</div>
-										<a href="{{page.products_calc}}" class="{{navbar_prefix}}icon-card">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-pizza" ]]</a>
-										<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}icon-card">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</a>
+										<a href="{{page.products_calc}}" class="{{navbar_prefix}}icon-card">
+											<div class="{{navbar_prefix}}icon-card-icon">
+												[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-pizza" ]]
+											</div>
+											<div class="{{navbar_prefix}}icon-card-name">Конструктор пиццы</div>
+										</a>
+										<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}icon-card">
+											<div class="{{navbar_prefix}}icon-card-icon">
+												[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]
+											</div>
+											<div class="{{navbar_prefix}}icon-card-name">Телефонный звонок</div>
+										</a>
 									</div>
 								</div>
 								<div class="cols {{navbar_prefix}}collapse-cols cols  is--left">

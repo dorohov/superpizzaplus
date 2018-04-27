@@ -4476,8 +4476,8 @@ body.rtl .formError .formErrorArrow {
 		@media @media-device-lg{
 			position: fixed;
 			top: @navbar-device;
-			left: -270px;
-			width: 270px;
+			left: -300px;
+			width: 300px;
 			height: ~"calc(100vh - @{navbar-device})";
 			opacity: 0;
 		    visibility: hidden;
@@ -4491,6 +4491,7 @@ body.rtl .formError .formErrorArrow {
 		    	opacity: 1;
 		    	left: 0;
 		    }
+
 		}
 		@media @media-size-xs-p {
 			left: -100%;
@@ -4511,7 +4512,7 @@ body.rtl .formError .formErrorArrow {
 		@media @media-device-lg{
 			height: 100%;
 			overflow: auto;
-			padding: 20px 25px;
+			padding: 0px 25px 20px;
 			position: relative;
 		}
 		@media @media-size-md {
@@ -4589,12 +4590,32 @@ body.rtl .formError .formErrorArrow {
 	&icon-block{
 		display: flex;
 		justify-content: space-between;
+		background-color: #fbf6ed;
+		margin-left: -25px;
+		margin-right: -25px;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 	&icon-card{
 		.btn-clearfix();
 		display: block;
+		width: 70px;
+		&.is--town{
+			width: 50px;
+		}
+	}
+	&icon-card-icon{
 		width: 40px;
 		height: 40px;
+		margin: 0 auto 5px;		
+	}
+	&icon-card-name{
+		color: @red;
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 10;
+		text-align: center;
 	}
 	//nav
 	@gutter: 13px;
