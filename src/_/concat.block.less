@@ -6731,7 +6731,7 @@ body.rtl .formError .formErrorArrow {
 		@media @media-point-device {
 			.makeCols(12, 12);
 			&.is--preview{
-				order: 1;
+				//order: 1;
 			}
 		}
 		@media @media-point-md {
@@ -6762,9 +6762,11 @@ body.rtl .formError .formErrorArrow {
 			padding-top: 30px;
 		}
 	}
-	&carousel-inner{
-		margin-bottom: 20px;
+	&carousel-inner{		
 		border-radius: 5px;
+		@media @media-point-screen {
+			margin-bottom: 20px;
+		}
 	}
 	&carousel-control{
 		@media @media-point-screen {
@@ -6774,6 +6776,9 @@ body.rtl .formError .formErrorArrow {
 	}
 	&indicators-panel{
 		justify-content: flex-start;
+		@media @media-point-device-lg {
+			display: none;
+		}
 	}
 	&text-block{
 		@media @media-point-xxl {

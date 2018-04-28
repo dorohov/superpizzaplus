@@ -2,12 +2,12 @@
     "name": "superpizzaplus.ru",
     "icons": [
         {
-            "src": "/bitrix/templates/azbn7theme/favicon/android-chrome-192x192.png",
+            "src": "/local/templates/azbn7theme/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/bitrix/templates/azbn7theme/favicon/android-chrome-256x256.png",
+            "src": "/local/templates/azbn7theme/favicon/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         }

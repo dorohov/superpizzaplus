@@ -1,3 +1,6 @@
+$("#products-preview").carousel({
+	swipe: 50
+});
 /*
 $(document.body).on('azbn.setActive', 'svg#azbn-svg .products-pizza__elem-group', {}, function(event){
 	event.preventDefault();

@@ -6,5 +6,5 @@ $(".form__control[type='tel']").mask("+7 (999) 999-99-99",{placeholder:"+7 (___)
 $("img").addClass("img-responsive");
 $("#header-slider").carousel({swipe:50});
 var url=window.location.pathname;$('.navbar__nav a[href="'+url+'"]').parent().addClass("is--active"),$(".azbn__town-link").removeAttr("data-toggle"),$(".azbn__town-link").on("click",function(a){$(this).toggleClass("is--active"),$(".navbar__town-menu").toggleClass("is--active")});
-
+$("#products-preview").carousel({swipe:50});
 $(".text__block table").addClass("table table-bordered"),$(".text__block ol").addClass("is--counts"),$(".text__block ul").addClass("is--styled"),$(".text__block .table.table-bordered").wrap('<div class="table-responsive"></div>');
