@@ -31,6 +31,10 @@
 	}
 	&info{
 		margin-bottom: 50px;
+		@media @media-point-smart {
+			margin-bottom: 0;
+			padding-top: 50px;
+		}
 		@media @media-point-screen {
 			margin-bottom: 7vw;
 		}
@@ -120,6 +124,7 @@
 				}
 			}
 		}
+		
 		&.is--cols-6{
 			&.is--calc-note,
 			&.is--calc-check{
@@ -140,6 +145,11 @@
 			}
 			@media @media-point-lg {			
 				.makeCols(4, 12);
+			}
+		}
+		&.is--calc-info{
+			@media @media-point-smart {
+				order: 1;
 			}
 		}				
 		@media @media-point-xxl {				

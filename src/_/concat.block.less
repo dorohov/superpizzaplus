@@ -447,11 +447,15 @@
 			margin-left: auto;
 		}
 		&.is--order-name{
+			@media @media-point-xxs {
+				flex-grow: 1;
+			}
 
 		}
 		&.is--cost{
 			white-space: nowrap;
 		}
+
 	}
 	//check
 	&check{
@@ -631,6 +635,7 @@
 		}
 		&.is--pizza-calc{
 			//color: @cream;
+			display: block;
 			color: @white;
 			padding-left: 30px;
 			position: relative;
@@ -2289,7 +2294,7 @@
 			}
 			@media @media-point-xs {
 				margin-left: auto;
-				margin-right: auto;
+				//margin-right: auto;
 			}
 		}
 	}
@@ -6268,6 +6273,10 @@ body.rtl .formError .formErrorArrow {
 	}
 	&info{
 		margin-bottom: 50px;
+		@media @media-point-smart {
+			margin-bottom: 0;
+			padding-top: 50px;
+		}
 		@media @media-point-screen {
 			margin-bottom: 7vw;
 		}
@@ -6357,6 +6366,7 @@ body.rtl .formError .formErrorArrow {
 				}
 			}
 		}
+		
 		&.is--cols-6{
 			&.is--calc-note,
 			&.is--calc-check{
@@ -6377,6 +6387,11 @@ body.rtl .formError .formErrorArrow {
 			}
 			@media @media-point-lg {			
 				.makeCols(4, 12);
+			}
+		}
+		&.is--calc-info{
+			@media @media-point-smart {
+				order: 1;
 			}
 		}				
 		@media @media-point-xxl {				

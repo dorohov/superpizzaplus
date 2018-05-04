@@ -81,11 +81,15 @@
 			margin-left: auto;
 		}
 		&.is--order-name{
+			@media @media-point-xxs {
+				flex-grow: 1;
+			}
 
 		}
 		&.is--cost{
 			white-space: nowrap;
 		}
+
 	}
 	//check
 	&check{
@@ -265,6 +269,7 @@
 		}
 		&.is--pizza-calc{
 			//color: @cream;
+			display: block;
 			color: @white;
 			padding-left: 30px;
 			position: relative;
