@@ -4669,13 +4669,20 @@ body.rtl .formError .formErrorArrow {
 				//.makeCols(3, 12);
 			}
 		}
+
 		&.is--soc{
+			order: 4;
+			@media @media-point-screen-lg {
+				display: none;
+			}
+		}
+		/*&.is--soc{
 			@media @media-device-lg {order: 1}
 			@media @media-screen-lg {
 				max-width: 140px;
 				min-width: 90px;
 			}
-		}
+		}*/
 		&.is--nav{
 		}
 		&.is--tel{
@@ -6340,6 +6347,7 @@ body.rtl .formError .formErrorArrow {
 			&.is--calc-check{
 				@media @media-point-device-lg {
 					.makeCols(12, 12);
+					order: 2;
 				}
 				@media @media-point-tablet {
 					.makeCols(6, 12);
@@ -6452,10 +6460,13 @@ body.rtl .formError .formErrorArrow {
 		&.is--card-calc{
 			margin-bottom: 15px;			
 		}
-		&.is--table{
-			max-width: 235px;
+		&.is--table{			
 			@media @media-point-smart {
 				margin-bottom: 10px;
+			}
+
+			@media @media-point-screen {
+				max-width: 145px;
 			}
 		}
 	}	
@@ -7433,6 +7444,11 @@ body.rtl .formError .formErrorArrow {
 
 			}
 		}
+		&.is--navbar{
+			width: @soc_size + 8;
+			height: @soc_size + 8;
+			color: @brown-light; 
+		}
 		&.is--vk{
 			&:hover{
 				color: @color-vk;			
@@ -7601,7 +7617,9 @@ body.rtl .formError .formErrorArrow {
 			}
 		}
 		&.is--basket-preview{
-			width: 255px;
+			@media @media-point-screen {
+				width: 165px;				
+			}
 		}
 	}	
 	.is--name{

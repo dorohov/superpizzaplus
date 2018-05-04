@@ -218,13 +218,20 @@
 				//.makeCols(3, 12);
 			}
 		}
+
 		&.is--soc{
+			order: 4;
+			@media @media-point-screen-lg {
+				display: none;
+			}
+		}
+		/*&.is--soc{
 			@media @media-device-lg {order: 1}
 			@media @media-screen-lg {
 				max-width: 140px;
 				min-width: 90px;
 			}
-		}
+		}*/
 		&.is--nav{
 		}
 		&.is--tel{

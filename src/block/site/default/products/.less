@@ -110,6 +110,7 @@
 			&.is--calc-check{
 				@media @media-point-device-lg {
 					.makeCols(12, 12);
+					order: 2;
 				}
 				@media @media-point-tablet {
 					.makeCols(6, 12);
@@ -222,10 +223,13 @@
 		&.is--card-calc{
 			margin-bottom: 15px;			
 		}
-		&.is--table{
-			max-width: 235px;
+		&.is--table{			
 			@media @media-point-smart {
 				margin-bottom: 10px;
+			}
+
+			@media @media-point-screen {
+				max-width: 145px;
 			}
 		}
 	}	
