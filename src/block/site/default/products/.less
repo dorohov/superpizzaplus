@@ -776,7 +776,11 @@
 				max-width: 50px;
 				.calcFontSize(46, 76, 320, 1680);
 				.calcLineHeight(26, 46, 320, 1680);
-			} 
+			}
+			&._complex::before{
+				content:none;
+				display:none;
+			}
 			&:hover,
 			&[aria-expanded="true"]{
 				color: @b-color-a;
